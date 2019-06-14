@@ -9,7 +9,7 @@ import javafx.util.Duration;
 public class GameSubScene extends SubScene {
 
     private final static String FONT_PATH = "src/model/resources/kenvector_future.ttf";
-    private final static String BACKGROUND_IMAGE = "model/resources/yellow_panel.png";
+    private final static String BACKGROUND_IMAGE = "model/resources/blue_panel.png";
 
     private boolean isHidden;
 
@@ -30,7 +30,7 @@ public class GameSubScene extends SubScene {
         isHidden = true;
 
         setLayoutX(1600);
-        setLayoutY(180);
+        setLayoutY(150);
     }
 
     public void moveSubScene(){
