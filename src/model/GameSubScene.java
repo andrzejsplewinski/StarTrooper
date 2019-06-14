@@ -47,4 +47,8 @@ public class GameSubScene extends SubScene {
         transition.play();
     }
 
+    public AnchorPane getPane(){
+        return (AnchorPane) this.getRoot();
+    }
+
 }
