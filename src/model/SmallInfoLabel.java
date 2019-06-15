@@ -1,5 +1,6 @@
 package model;
 
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -13,35 +14,32 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
-public class InfoLabel extends Label {
+public class SmallInfoLabel extends Label {
 
     private final static String FONT_PATH = "src/model/resources/kenvector_future.ttf";
-    private final static String BACKGROUND_IMAGE = "view/resources/blue_button13.png";
 
-    public InfoLabel(String text){
-
-        setPrefWidth(380);
-        setPrefHeight(49);
-        setText(text);
-        setWrapText(true);
-        setLabelFont();
-        setAlignment(Pos.CENTER);
-
-
-        BackgroundImage backgroundImage = new BackgroundImage(new Image(BACKGROUND_IMAGE, 380, 49, false, true),
+    public SmallInfoLabel(String text){
+        setPrefWidth(130);
+        setPrefHeight(50);
+        BackgroundImage backgroundImage = new BackgroundImage(new Image("view/resources/buttonBlue.png",
+                130, 50 , false, true),
                 BackgroundRepeat.NO_REPEAT,
                 BackgroundRepeat.NO_REPEAT,
                 BackgroundPosition.DEFAULT,
                 null);
         setBackground(new Background(backgroundImage));
-
-
+        setAlignment(Pos.CENTER_LEFT);
+        setPadding(new Insets(10,10, 10,10));
+        setLabelFont();
+        setText(text);
     }
 
     private void setLabelFont(){
         try {
-            setFont(Font.loadFont(new FileInputStream(new File(FONT_PATH)), 23));
+            setFont(Font.loadFont(new FileInputStream(new File(FONT_PATH)), 15));
         } catch (FileNotFoundException e) {
-            setFont(Font.font("Verdana", 23));        }
+            setFont(Font.font("Verdana", 15));
+        }
     }
+
 }
