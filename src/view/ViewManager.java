@@ -115,6 +115,17 @@ public class ViewManager {
         GameButtons startButton = new GameButtons("START");
         startButton.setLayoutX(350);
         startButton.setLayoutY(300);
+
+        startButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if(shipChoosen != null){
+                    GameViewManager gameViewManager = new GameViewManager();
+                    gameViewManager.createNewGame(mainStage, shipChoosen);
+                }
+            }
+        });
+
         return startButton;
     }
 
