@@ -2,6 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec0a164c-90b0-4f53-8e19-1499bcdef361" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/view/resources/shipchooser/meteorBrown_med3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/resources/shipchooser/meteorGrey_med1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/model/GameViewManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/model/GameViewManager$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/model/GameViewManager$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/model/GameViewManager$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/model/GameViewManager$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/model/GameViewManager$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/model/GameViewManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/model/GameViewManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/GameViewManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/GameViewManager.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -90,12 +97,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/ViewManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="123" column="72" selection-start-line="123" selection-start-column="61" selection-end-line="123" selection-end-column="72" />
+            <state relative-caret-position="172">
+              <caret line="123" column="36" selection-start-line="123" selection-start-column="36" selection-end-line="123" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4057#4058#0" expanded="true" />
-                <element signature="e#4852#4853#0" expanded="true" />
+                <element signature="e#4049#4050#0" expanded="true" />
+                <element signature="e#4844#4845#0" expanded="true" />
                 <element signature="e#3216#3217#0" expanded="true" />
                 <element signature="e#3274#3275#0" expanded="true" />
                 <element signature="e#3565#3566#0" expanded="true" />
@@ -116,12 +123,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/model/GameViewManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="165" column="12" selection-start-line="165" selection-start-column="12" selection-end-line="165" selection-end-column="12" />
+            <state relative-caret-position="342">
+              <caret line="39" column="94" selection-start-line="39" selection-start-column="94" selection-end-line="39" selection-end-column="94" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3120#3277#0" expanded="true" />
-                <element signature="e#3276#3277#0" expanded="true" />
+                <element signature="e#5179#5353#0" expanded="true" />
+                <element signature="e#5352#5353#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -242,7 +249,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/model/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/view/resources/shipchooser" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -252,6 +259,7 @@
       <recent name="C:\Development\Projects\GameApllication\src\view\resources" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Development\Projects\GameApllication\src\view\resources\shipchooser" />
       <recent name="C:\Development\Projects\GameApllication\src\model\resources" />
       <recent name="C:\Development\Projects\GameApllication\src\view\resources" />
     </key>
@@ -296,18 +304,18 @@
       <option name="presentableId" value="Default" />
       <updated>1560344232620</updated>
       <workItem from="1560344236114" duration="15899000" />
-      <workItem from="1560519463966" duration="18634000" />
+      <workItem from="1560519463966" duration="21250000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34533000" />
+    <option name="totallyTimeSpent" value="37149000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="-7" width="1486" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16970547" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16970547" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -316,7 +324,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3297587" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24396783" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.24396783" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -379,30 +387,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/ViewManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="123" column="72" selection-start-line="123" selection-start-column="61" selection-end-line="123" selection-end-column="72" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4057#4058#0" expanded="true" />
-            <element signature="e#4852#4853#0" expanded="true" />
-            <element signature="e#3216#3217#0" expanded="true" />
-            <element signature="e#3274#3275#0" expanded="true" />
-            <element signature="e#3565#3566#0" expanded="true" />
-            <element signature="e#3623#3624#0" expanded="true" />
-            <element signature="e#3929#3930#0" expanded="true" />
-            <element signature="e#3990#3991#0" expanded="true" />
-            <element signature="e#4289#4290#0" expanded="true" />
-            <element signature="e#4329#4330#0" expanded="true" />
-            <element signature="e#4471#4472#0" expanded="true" />
-            <element signature="e#4535#4536#0" expanded="true" />
-            <element signature="e#4684#4685#0" expanded="true" />
-            <element signature="e#4736#4737#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/SHIP.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -438,14 +422,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/GameViewManager.java">
+    <entry file="file://$PROJECT_DIR$/src/view/ViewManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="165" column="12" selection-start-line="165" selection-start-column="12" selection-end-line="165" selection-end-column="12" />
+        <state relative-caret-position="172">
+          <caret line="123" column="36" selection-start-line="123" selection-start-column="36" selection-end-line="123" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3120#3277#0" expanded="true" />
-            <element signature="e#3276#3277#0" expanded="true" />
+            <element signature="e#4049#4050#0" expanded="true" />
+            <element signature="e#4844#4845#0" expanded="true" />
+            <element signature="e#3216#3217#0" expanded="true" />
+            <element signature="e#3274#3275#0" expanded="true" />
+            <element signature="e#3565#3566#0" expanded="true" />
+            <element signature="e#3623#3624#0" expanded="true" />
+            <element signature="e#3929#3930#0" expanded="true" />
+            <element signature="e#3990#3991#0" expanded="true" />
+            <element signature="e#4289#4290#0" expanded="true" />
+            <element signature="e#4329#4330#0" expanded="true" />
+            <element signature="e#4471#4472#0" expanded="true" />
+            <element signature="e#4535#4536#0" expanded="true" />
+            <element signature="e#4684#4685#0" expanded="true" />
+            <element signature="e#4736#4737#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/GameViewManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="39" column="94" selection-start-line="39" selection-start-column="94" selection-end-line="39" selection-end-column="94" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5179#5353#0" expanded="true" />
+            <element signature="e#5352#5353#0" expanded="true" />
           </folding>
         </state>
       </provider>
