@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec0a164c-90b0-4f53-8e19-1499bcdef361" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/GameViewManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/GameViewManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/SHIP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/SHIP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/ViewManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ViewManager.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -119,12 +116,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/model/GameViewManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="52" column="17" lean-forward="true" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
+            <state relative-caret-position="244">
+              <caret line="165" column="12" selection-start-line="165" selection-start-column="12" selection-end-line="165" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2348#2488#0" expanded="true" />
-                <element signature="e#2487#2488#0" expanded="true" />
+                <element signature="e#3120#3277#0" expanded="true" />
+                <element signature="e#3276#3277#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -299,12 +296,12 @@
       <option name="presentableId" value="Default" />
       <updated>1560344232620</updated>
       <workItem from="1560344236114" duration="15899000" />
-      <workItem from="1560519463966" duration="15558000" />
+      <workItem from="1560519463966" duration="18634000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31457000" />
+    <option name="totallyTimeSpent" value="34533000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="-7" width="1486" height="878" extended-state="6" />
@@ -443,12 +440,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/GameViewManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="52" column="17" lean-forward="true" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
+        <state relative-caret-position="244">
+          <caret line="165" column="12" selection-start-line="165" selection-start-column="12" selection-end-line="165" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2348#2488#0" expanded="true" />
-            <element signature="e#2487#2488#0" expanded="true" />
+            <element signature="e#3120#3277#0" expanded="true" />
+            <element signature="e#3276#3277#0" expanded="true" />
           </folding>
         </state>
       </provider>
