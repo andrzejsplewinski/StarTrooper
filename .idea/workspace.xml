@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec0a164c-90b0-4f53-8e19-1499bcdef361" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/view/resources/enemies/enemyBlack1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/resources/enemies/enemyBlue2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/resources/enemies/enemyGreen3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/resources/enemies/enemyRed4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/resources/shipchooser/fire01.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/model/GameViewManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/model/GameViewManager$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/model/GameViewManager$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/model/GameViewManager$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/model/GameViewManager$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/model/GameViewManager$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/model/GameViewManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/model/GameViewManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/GameViewManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/GameViewManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/ViewManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ViewManager.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -141,18 +130,28 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/model/GameViewManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="253" column="44" selection-start-line="253" selection-start-column="44" selection-end-line="253" selection-end-column="44" />
+            <state relative-caret-position="31">
+              <caret line="197" column="36" selection-start-line="197" selection-start-column="36" selection-end-line="197" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#GameViewManager#0;class#GameViewManager#0" />
                 <element signature="method#initializeStage#0;class#GameViewManager#0" />
                 <element signature="e#2069#3395#0" />
-                <element signature="e#7275#7828#0" />
+                <element signature="e#3401#3690#0" />
+                <element signature="e#4688#6454#0" />
+                <element signature="e#6217#6472#0" />
+                <element signature="e#7016#8295#0" />
+                <element signature="e#8333#9365#0" />
                 <element signature="e#7834#8031#0" />
-                <element signature="e#8251#8566#0" expanded="true" />
-                <element signature="e#8565#8566#0" expanded="true" />
+                <element signature="e#8187#8424#0" />
+                <element signature="e#8430#8831#0" />
+                <element signature="e#9399#9714#0" expanded="true" />
+                <element signature="e#9713#9714#0" expanded="true" />
+                <element signature="e#8603#10203#0" />
+                <element signature="e#10426#11210#0" />
                 <element signature="e#9149#9501#0" />
+                <element signature="e#11574#14296#0" />
+                <element signature="e#14302#14557#0" />
               </folding>
             </state>
           </provider>
@@ -198,8 +197,8 @@
       <find>anim</find>
       <find>width</find>
       <find>laserShoot</find>
-      <find>blackEnemies</find>
       <find>laserShoo</find>
+      <find>blackEnemies</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -355,12 +354,12 @@
       <option name="presentableId" value="Default" />
       <updated>1560344232620</updated>
       <workItem from="1560344236114" duration="15899000" />
-      <workItem from="1560519463966" duration="52811000" />
+      <workItem from="1560519463966" duration="57851000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68710000" />
+    <option name="totallyTimeSpent" value="73750000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="-7" width="1486" height="878" extended-state="6" />
@@ -529,18 +528,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/GameViewManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="253" column="44" selection-start-line="253" selection-start-column="44" selection-end-line="253" selection-end-column="44" />
+        <state relative-caret-position="31">
+          <caret line="197" column="36" selection-start-line="197" selection-start-column="36" selection-end-line="197" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#GameViewManager#0;class#GameViewManager#0" />
             <element signature="method#initializeStage#0;class#GameViewManager#0" />
             <element signature="e#2069#3395#0" />
-            <element signature="e#7275#7828#0" />
+            <element signature="e#3401#3690#0" />
+            <element signature="e#4688#6454#0" />
+            <element signature="e#6217#6472#0" />
+            <element signature="e#7016#8295#0" />
+            <element signature="e#8333#9365#0" />
             <element signature="e#7834#8031#0" />
-            <element signature="e#8251#8566#0" expanded="true" />
-            <element signature="e#8565#8566#0" expanded="true" />
+            <element signature="e#8187#8424#0" />
+            <element signature="e#8430#8831#0" />
+            <element signature="e#9399#9714#0" expanded="true" />
+            <element signature="e#9713#9714#0" expanded="true" />
+            <element signature="e#8603#10203#0" />
+            <element signature="e#10426#11210#0" />
             <element signature="e#9149#9501#0" />
+            <element signature="e#11574#14296#0" />
+            <element signature="e#14302#14557#0" />
           </folding>
         </state>
       </provider>
