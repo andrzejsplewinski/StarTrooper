@@ -16,7 +16,6 @@ import java.util.List;
 
 import static javafx.scene.layout.BackgroundSize.DEFAULT;
 
-@SuppressWarnings("unused")
 public class ViewManager {
 
     private static final int HEIGHT = 900;
