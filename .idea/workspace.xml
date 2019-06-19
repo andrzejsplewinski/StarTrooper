@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec0a164c-90b0-4f53-8e19-1499bcdef361" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ranking.list" beforeDir="false" afterPath="$PROJECT_DIR$/ranking.list" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/GameViewManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/GameViewManager.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -58,15 +56,19 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/ViewManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="102" column="31" selection-start-line="102" selection-start-column="31" selection-end-line="102" selection-end-column="31" />
+            <state relative-caret-position="488">
+              <caret line="91" column="38" selection-start-line="91" selection-start-column="38" selection-end-line="91" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#ViewManager#0;class#ViewManager#0" />
                 <element signature="method#showSubScene#0;class#ViewManager#0" />
+                <element signature="method#createSubScene#0;class#ViewManager#0" />
+                <element signature="method#createShipChooserSubScene#0;class#ViewManager#0" />
+                <element signature="method#createScoreSubScene#0;class#ViewManager#0" />
+                <element signature="method#createShipsToChoose#0;class#ViewManager#0" />
                 <element signature="method#createButtonToStart#0;class#ViewManager#0" />
                 <element signature="e#4564#4565#0" expanded="true" />
                 <element signature="e#4596#4597#0" expanded="true" />
@@ -83,18 +85,17 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/model/GameViewManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="470" column="45" selection-start-line="470" selection-start-column="45" selection-end-line="470" selection-end-column="45" />
+            <state relative-caret-position="370">
+              <caret line="506" column="42" selection-start-line="506" selection-start-column="42" selection-end-line="506" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2686#2823#0" />
                 <element signature="e#2829#3042#0" />
                 <element signature="e#3168#4694#0" />
                 <element signature="e#4517#4834#0" />
-                <element signature="e#7880#8873#0" />
                 <element signature="e#9303#9500#0" />
                 <element signature="e#9669#9906#0" />
                 <element signature="e#10164#10615#0" />
@@ -108,7 +109,7 @@
                 <element signature="e#18986#19443#1" />
                 <element signature="e#18512#18995#0" />
                 <element signature="e#19108#19263#0" />
-                <element signature="e#19595#20228#0" />
+                <element signature="e#20772#21526#0" />
               </folding>
             </state>
           </provider>
@@ -156,8 +157,8 @@
         <option value="$PROJECT_DIR$/src/model/SHIP.java" />
         <option value="$PROJECT_DIR$/src/model/SmallInfoLabel.java" />
         <option value="$PROJECT_DIR$/src/model/FXMLDocumentControl.java" />
-        <option value="$PROJECT_DIR$/src/model/GameViewManager.java" />
         <option value="$PROJECT_DIR$/src/view/ViewManager.java" />
+        <option value="$PROJECT_DIR$/src/model/GameViewManager.java" />
       </list>
     </option>
   </component>
@@ -268,12 +269,12 @@
       <updated>1560344232620</updated>
       <workItem from="1560344236114" duration="15899000" />
       <workItem from="1560519463966" duration="65998000" />
-      <workItem from="1560881749086" duration="22147000" />
+      <workItem from="1560881749086" duration="22827000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104044000" />
+    <option name="totallyTimeSpent" value="104724000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -429,17 +430,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/ViewManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="91" column="38" selection-start-line="91" selection-start-column="38" selection-end-line="91" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#ViewManager#0;class#ViewManager#0" />
+            <element signature="method#showSubScene#0;class#ViewManager#0" />
+            <element signature="method#createSubScene#0;class#ViewManager#0" />
+            <element signature="method#createShipChooserSubScene#0;class#ViewManager#0" />
+            <element signature="method#createScoreSubScene#0;class#ViewManager#0" />
+            <element signature="method#createShipsToChoose#0;class#ViewManager#0" />
+            <element signature="method#createButtonToStart#0;class#ViewManager#0" />
+            <element signature="e#4564#4565#0" expanded="true" />
+            <element signature="e#4596#4597#0" expanded="true" />
+            <element signature="method#addMenuButtons#0;class#ViewManager#0" />
+            <element signature="method#createButtons#0;class#ViewManager#0" />
+            <element signature="method#createScoreButton#0;class#ViewManager#0" />
+            <element signature="method#createHelpButton#0;class#ViewManager#0" />
+            <element signature="method#createCreditsButton#0;class#ViewManager#0" />
+            <element signature="method#createExitButton#0;class#ViewManager#0" />
+            <element signature="method#createBackground#0;class#ViewManager#0" />
+            <element signature="method#createLogo#0;class#ViewManager#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/GameViewManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="470" column="45" selection-start-line="470" selection-start-column="45" selection-end-line="470" selection-end-column="45" />
+        <state relative-caret-position="370">
+          <caret line="506" column="42" selection-start-line="506" selection-start-column="42" selection-end-line="506" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2686#2823#0" />
             <element signature="e#2829#3042#0" />
             <element signature="e#3168#4694#0" />
             <element signature="e#4517#4834#0" />
-            <element signature="e#7880#8873#0" />
             <element signature="e#9303#9500#0" />
             <element signature="e#9669#9906#0" />
             <element signature="e#10164#10615#0" />
@@ -453,30 +480,7 @@
             <element signature="e#18986#19443#1" />
             <element signature="e#18512#18995#0" />
             <element signature="e#19108#19263#0" />
-            <element signature="e#19595#20228#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/ViewManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="102" column="31" selection-start-line="102" selection-start-column="31" selection-end-line="102" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#ViewManager#0;class#ViewManager#0" />
-            <element signature="method#showSubScene#0;class#ViewManager#0" />
-            <element signature="method#createButtonToStart#0;class#ViewManager#0" />
-            <element signature="e#4564#4565#0" expanded="true" />
-            <element signature="e#4596#4597#0" expanded="true" />
-            <element signature="method#addMenuButtons#0;class#ViewManager#0" />
-            <element signature="method#createButtons#0;class#ViewManager#0" />
-            <element signature="method#createScoreButton#0;class#ViewManager#0" />
-            <element signature="method#createHelpButton#0;class#ViewManager#0" />
-            <element signature="method#createCreditsButton#0;class#ViewManager#0" />
-            <element signature="method#createExitButton#0;class#ViewManager#0" />
-            <element signature="method#createBackground#0;class#ViewManager#0" />
-            <element signature="method#createLogo#0;class#ViewManager#0" />
+            <element signature="e#20772#21526#0" />
           </folding>
         </state>
       </provider>
