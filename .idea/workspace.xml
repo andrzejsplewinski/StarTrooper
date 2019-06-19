@@ -2,27 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec0a164c-90b0-4f53-8e19-1499bcdef361" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/ranking/ranking.list" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/resources/enemies/playerShip1_damage3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/model/GameViewManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/model/GameViewManager$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/model/GameViewManager$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/model/GameViewManager$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/model/GameViewManager$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/model/GameViewManager$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/model/GameViewManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/model/GameViewManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$9.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ranking.list" beforeDir="false" afterPath="$PROJECT_DIR$/ranking.list" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/GameViewManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/GameViewManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/ViewManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ViewManager.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -76,7 +58,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/view/ViewManager.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="299">
@@ -101,20 +83,21 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/GameViewManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="212" column="13" lean-forward="true" selection-start-line="212" selection-start-column="13" selection-end-line="212" selection-end-column="13" />
+            <state relative-caret-position="268">
+              <caret line="470" column="45" selection-start-line="470" selection-start-column="45" selection-end-line="470" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2686#2823#0" />
                 <element signature="e#2829#3042#0" />
+                <element signature="e#3168#4694#0" />
                 <element signature="e#4517#4834#0" />
-                <element signature="e#5443#7499#0" />
                 <element signature="e#7880#8873#0" />
                 <element signature="e#9303#9500#0" />
                 <element signature="e#9669#9906#0" />
+                <element signature="e#10164#10615#0" />
                 <element signature="e#10450#10815#0" expanded="true" />
                 <element signature="e#10814#10815#0" expanded="true" />
                 <element signature="e#10185#12056#0" />
@@ -173,8 +156,8 @@
         <option value="$PROJECT_DIR$/src/model/SHIP.java" />
         <option value="$PROJECT_DIR$/src/model/SmallInfoLabel.java" />
         <option value="$PROJECT_DIR$/src/model/FXMLDocumentControl.java" />
-        <option value="$PROJECT_DIR$/src/view/ViewManager.java" />
         <option value="$PROJECT_DIR$/src/model/GameViewManager.java" />
+        <option value="$PROJECT_DIR$/src/view/ViewManager.java" />
       </list>
     </option>
   </component>
@@ -285,12 +268,12 @@
       <updated>1560344232620</updated>
       <workItem from="1560344236114" duration="15899000" />
       <workItem from="1560519463966" duration="65998000" />
-      <workItem from="1560881749086" duration="20611000" />
+      <workItem from="1560881749086" duration="22147000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102508000" />
+    <option name="totallyTimeSpent" value="104044000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -305,7 +288,7 @@
     <frame x="57" y="-7" width="1486" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17180926" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13253857" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -338,20 +321,6 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/model/GameViewManager.java</url>
-          <line>311</line>
-          <properties class="model.GameViewManager" method="movesShip">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/game/view/ViewMenager.java" />
@@ -460,6 +429,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/GameViewManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="470" column="45" selection-start-line="470" selection-start-column="45" selection-end-line="470" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2686#2823#0" />
+            <element signature="e#2829#3042#0" />
+            <element signature="e#3168#4694#0" />
+            <element signature="e#4517#4834#0" />
+            <element signature="e#7880#8873#0" />
+            <element signature="e#9303#9500#0" />
+            <element signature="e#9669#9906#0" />
+            <element signature="e#10164#10615#0" />
+            <element signature="e#10450#10815#0" expanded="true" />
+            <element signature="e#10814#10815#0" expanded="true" />
+            <element signature="e#10185#12056#0" />
+            <element signature="e#12264#13076#1" />
+            <element signature="e#13117#13475#1" />
+            <element signature="e#17577#17856#0" />
+            <element signature="e#16419#16453#0" />
+            <element signature="e#18986#19443#1" />
+            <element signature="e#18512#18995#0" />
+            <element signature="e#19108#19263#0" />
+            <element signature="e#19595#20228#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/ViewManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -479,34 +477,6 @@
             <element signature="method#createExitButton#0;class#ViewManager#0" />
             <element signature="method#createBackground#0;class#ViewManager#0" />
             <element signature="method#createLogo#0;class#ViewManager#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/GameViewManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="212" column="13" lean-forward="true" selection-start-line="212" selection-start-column="13" selection-end-line="212" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2686#2823#0" />
-            <element signature="e#2829#3042#0" />
-            <element signature="e#4517#4834#0" />
-            <element signature="e#5443#7499#0" />
-            <element signature="e#7880#8873#0" />
-            <element signature="e#9303#9500#0" />
-            <element signature="e#9669#9906#0" />
-            <element signature="e#10450#10815#0" expanded="true" />
-            <element signature="e#10814#10815#0" expanded="true" />
-            <element signature="e#10185#12056#0" />
-            <element signature="e#12264#13076#1" />
-            <element signature="e#13117#13475#1" />
-            <element signature="e#17577#17856#0" />
-            <element signature="e#16419#16453#0" />
-            <element signature="e#18986#19443#1" />
-            <element signature="e#18512#18995#0" />
-            <element signature="e#19108#19263#0" />
-            <element signature="e#19595#20228#0" />
           </folding>
         </state>
       </provider>

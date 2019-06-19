@@ -111,7 +111,7 @@ public class GameViewManager {
                     if (!isSpaceKeyPressed) {
                         laserImage = new ImageView(LASER_PLAYER_SHOOT_IMAGE);
                         Node newLaser = laserImage;
-                        newLaser.relocate(ship.getLayoutX()+ ship.getBoundsInLocal().getWidth(), ship.getLayoutY());
+                        newLaser.relocate(ship.getLayoutX() + 48, ship.getLayoutY() - 20);
                         laser.add(newLaser);
                         gamePane.getChildren().add(newLaser);
                         isSpaceKeyPressed = true;
@@ -195,8 +195,7 @@ public class GameViewManager {
         gamePane.getChildren().add(greenEnemies);
         initializeTransition();
 
-        for (int i = 0; i<laser.size(); i++) {
-
+        for (int i = 0; i < laser.size(); i++) {
             gamePane.getChildren().add(laser.get(i));
         }
     }
@@ -205,10 +204,10 @@ public class GameViewManager {
     private void moveGameElements() {
         star.setLayoutY(star.getLayoutY() + 5);
 
-        for(int i = 0 ; i<laser.size(); i ++){
-            if( laser.get(i).getLayoutY()<GAME_HEIGHT){
+        for (int i = 0; i < laser.size(); i++) {
+            if (laser.get(i).getLayoutY() < GAME_HEIGHT) {
                 laser.get(i).setLayoutY(laser.get(i).getLayoutY() - 7);
-            }else {
+            } else {
                 laser.remove(i);
             }
         }
@@ -296,16 +295,13 @@ public class GameViewManager {
                 moveBackground();
                 checkIfElementsAreBehindTheSceneAndRelocate();
                 moveGameElements();
-                shootLaserBlast(delayLaserShoot);
                 checkIfElementsCollide();
                 movesShip();
             }
         };
         gameTimer.start();
     }
-    private void shootLaserBlast(int delta){
 
-    }
     private void movesShip() {
 //        if (isSpaceKeyPressed) {
 //            laserShoot = new ImageView(LASER_PLAYER_SHOOT_IMAGE);
@@ -426,64 +422,80 @@ public class GameViewManager {
             }
         }
 
-//        for (int i = 0; i < brownMeteors.size(); i++) {
-//            if (METEOR_RADIUS + LASER_PLAYER_RADIUS > calculateDistance(brownMeteors.get(i).getLayoutX() + 20, laserImage.getLayoutX() + 12,
-//                    brownMeteors.get(i).getLayoutY() + 20, laserImage.getLayoutY() + 12)) {
-//                setElementsOnPosition(brownMeteors.get(i));
-//                gamePane.getChildren().remove(laserImage);
-//            }
-//        }
-//        for (int i = 0; i < greyMeteors.size(); i++) {
-//            if (METEOR_RADIUS + LASER_PLAYER_RADIUS > calculateDistance(greyMeteors.get(i).getLayoutX() + 20, laserImage.getLayoutX() + 12,
-//                    greyMeteors.get(i).getLayoutY() + 20, laserImage.getLayoutY() + 12)) {
-//                setElementsOnPosition(greyMeteors.get(i));
-//                gamePane.getChildren().remove(laserImage);
-//            }
-//        }
-//
-//        for (int i = 0; i < blackEnemies.size(); i++) {
-//            if (ENEMY_SHIP_RADIUS + LASER_PLAYER_RADIUS > calculateDistance(blackEnemies.get(i).getLayoutX() + 49, laserImage.getLayoutX() + 12,
-//                    blackEnemies.get(i).getLayoutY() + 37, laserImage.getLayoutY() + 12)) {
-//                setElementsOnPosition(blackEnemies.get(i));
-//                gamePane.getChildren().remove(laserImage);
-//            }
-//
-//
-//            if (ENEMY_SHIP_RADIUS + SHIP_RADIUS > calculateDistance(blackEnemies.get(i).getLayoutX() + 49, ship.getLayoutX() + 49,
-//                    blackEnemies.get(i).getLayoutY() + 37, ship.getLayoutY() + 37)) {
-//                setElementsOnPosition(blackEnemies.get(i));
-//                removeLife();
-//            }
-//        }
-//
-//
-//        for (int i = 0; i < blueEnemies.size(); i++) {
-//            if (ENEMY_SHIP_RADIUS + LASER_PLAYER_RADIUS > calculateDistance(blueEnemies.get(i).getLayoutX() + 49, laserImage.getLayoutX() + 12,
-//                    blueEnemies.get(i).getLayoutY() + 37, laserImage.getLayoutY() + 12)) {
-//                setElementsOnPosition(blueEnemies.get(i));
-//                gamePane.getChildren().remove(laserImage);
-//            }
-//
-//            if (ENEMY_SHIP_RADIUS + SHIP_RADIUS > calculateDistance(blueEnemies.get(i).getLayoutX() + 49, ship.getLayoutX() + 49,
-//                    blueEnemies.get(i).getLayoutY() + 37, ship.getLayoutY() + 37)) {
-//                setElementsOnPosition(blueEnemies.get(i));
-//                removeLife();
-//            }
-//        }
-//
-//        for (int i = 0; i < 1; i++) {
-//            if (ENEMY_SHIP_RADIUS + LASER_PLAYER_RADIUS > calculateDistance(greenEnemies.getLayoutX() + 49, laserImage.getLayoutX() + 12,
-//                    greenEnemies.getLayoutY() + 37, laserImage.getLayoutY() + 12)) {
-//                setElementsOnPosition(greenEnemies);
-//                gamePane.getChildren().remove(laserImage);
-//            }
-//
-//            if (ENEMY_SHIP_RADIUS + SHIP_RADIUS > calculateDistance(greenEnemies.getLayoutX() + 49, ship.getLayoutX() + 49,
-//                    greenEnemies.getLayoutY() + 37, ship.getLayoutY() + 37)) {
-//                setElementsOnPosition(greenEnemies);
-//                removeLife();
-//            }
-//        }
+        for (int i = 0; i < brownMeteors.size(); i++) {
+            for (int k = 0; k < laser.size(); k++) {
+                if (METEOR_RADIUS + LASER_PLAYER_RADIUS > calculateDistance(brownMeteors.get(i).getLayoutX() + 20, laser.get(k).getLayoutX() + 12,
+                        brownMeteors.get(i).getLayoutY() + 20, laser.get(k).getLayoutY() + 12)) {
+                    setElementsOnPosition(brownMeteors.get(i));
+                    gamePane.getChildren().remove(laser.get(k));
+                    laser.remove(k);
+                }
+            }
+        }
+
+        for (int i = 0; i < greyMeteors.size(); i++) {
+            for (int k = 0; k < laser.size(); k++) {
+                if (METEOR_RADIUS + LASER_PLAYER_RADIUS > calculateDistance(greyMeteors.get(i).getLayoutX() + 20, laser.get(k).getLayoutX() + 12,
+                        greyMeteors.get(i).getLayoutY() + 20, laser.get(k).getLayoutY() + 12)) {
+                    setElementsOnPosition(greyMeteors.get(i));
+                    gamePane.getChildren().remove(laser.get(k));
+                    laser.remove(k);
+
+                }
+            }
+        }
+
+        for (int i = 0; i < blackEnemies.size(); i++) {
+            for (int k = 0; k < laser.size(); k++) {
+                if (ENEMY_SHIP_RADIUS + LASER_PLAYER_RADIUS > calculateDistance(blackEnemies.get(i).getLayoutX() + 49, laser.get(k).getLayoutX() + 12,
+                        blackEnemies.get(i).getLayoutY() + 37, laser.get(k).getLayoutY() + 12)) {
+                    setElementsOnPosition(blackEnemies.get(i));
+                    gamePane.getChildren().remove(laser.get(k));
+                    laser.remove(k);
+
+                }
+            }
+            if (ENEMY_SHIP_RADIUS + SHIP_RADIUS > calculateDistance(blackEnemies.get(i).getLayoutX() + 49, ship.getLayoutX() + 49,
+                    blackEnemies.get(i).getLayoutY() + 37, ship.getLayoutY() + 37)) {
+                setElementsOnPosition(blackEnemies.get(i));
+                removeLife();
+            }
+        }
+
+
+        for (int i = 0; i < blueEnemies.size(); i++) {
+            for (int k = 0; k < laser.size(); k++) {
+                if (ENEMY_SHIP_RADIUS + LASER_PLAYER_RADIUS > calculateDistance(blueEnemies.get(i).getLayoutX() + 49, laser.get(k).getLayoutX() + 12,
+                        blueEnemies.get(i).getLayoutY() + 37, laser.get(k).getLayoutY() + 12)) {
+                    setElementsOnPosition(blueEnemies.get(i));
+                    gamePane.getChildren().remove(laser.get(k));
+                    laser.remove(k);
+
+                }
+            }
+            if (ENEMY_SHIP_RADIUS + SHIP_RADIUS > calculateDistance(blueEnemies.get(i).getLayoutX() + 49, ship.getLayoutX() + 49,
+                    blueEnemies.get(i).getLayoutY() + 37, ship.getLayoutY() + 37)) {
+                setElementsOnPosition(blueEnemies.get(i));
+                removeLife();
+            }
+        }
+
+        for (int i = 0; i < 1; i++) {
+            for (int k = 0; k < laser.size(); k++) {
+                if (ENEMY_SHIP_RADIUS + LASER_PLAYER_RADIUS > calculateDistance(greenEnemies.getLayoutX() + 49, laser.get(k).getLayoutX() + 12,
+                        greenEnemies.getLayoutY() + 37, laser.get(k).getLayoutY() + 12)) {
+                    setElementsOnPosition(greenEnemies);
+                    gamePane.getChildren().remove(laser.get(k));
+                    laser.remove(k);
+
+                }
+            }
+            if (ENEMY_SHIP_RADIUS + SHIP_RADIUS > calculateDistance(greenEnemies.getLayoutX() + 49, ship.getLayoutX() + 49,
+                    greenEnemies.getLayoutY() + 37, ship.getLayoutY() + 37)) {
+                setElementsOnPosition(greenEnemies);
+                removeLife();
+            }
+        }
     }
 
 
@@ -543,7 +555,7 @@ public class GameViewManager {
 
     public void initializeTransition() {
         Path path = new Path();
-        path.getElements().add(new MoveTo(250, -100 ));
+        path.getElements().add(new MoveTo(250, -100));
         ArcTo arcTo = new ArcTo();
         arcTo.setX(150);
         arcTo.setY(150);
