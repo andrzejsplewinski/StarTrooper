@@ -11,6 +11,7 @@ import javafx.scene.layout.*;
 import javafx.stage.Stage;
 import model.*;
 
+import javax.swing.text.html.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,6 +39,7 @@ public class ViewManager {
 
     List<ShipPicker> shipList;
     private SHIP shipChoosen;
+    private List<GameViewManager> rankingList;
 
     public ViewManager() {
         menuButtons = new ArrayList<>();
@@ -71,6 +73,7 @@ public class ViewManager {
         mainPane.getChildren().add(scoreSubScene);
 
         createShipChooserSubScene();
+        createScoreSubScene();
     }
 
     private void createShipChooserSubScene() {
@@ -86,6 +89,22 @@ public class ViewManager {
         shipChooseSubScene.getPane().getChildren().add(createButtonToStart());
     }
 
+    private void createScoreSubScene(){
+
+
+        scoreSubScene = new GameSubScene();
+        mainPane.getChildren().add(scoreSubScene);
+
+        InfoLabel infoLabel = new InfoLabel("SCORES");
+        infoLabel.setLayoutX(110);
+        infoLabel.setLayoutY(25);
+
+        GameViewManager viewManager = new GameViewManager();
+        viewManager.loadList();
+
+        scoreSubScene.getPane().getChildren().add(infoLabel);
+
+    }
     private HBox createShipsToChoose() {
         HBox box = new HBox();
         box.setSpacing(20);
