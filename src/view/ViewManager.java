@@ -11,7 +11,6 @@ import javafx.scene.layout.*;
 import javafx.stage.Stage;
 import model.*;
 
-import javax.swing.text.html.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -89,7 +88,7 @@ public class ViewManager {
         shipChooseSubScene.getPane().getChildren().add(createButtonToStart());
     }
 
-    private void createScoreSubScene(){
+    private void createScoreSubScene() {
 
 
         scoreSubScene = new GameSubScene();
@@ -105,6 +104,7 @@ public class ViewManager {
         scoreSubScene.getPane().getChildren().add(infoLabel);
 
     }
+
     private HBox createShipsToChoose() {
         HBox box = new HBox();
         box.setSpacing(20);
@@ -137,7 +137,7 @@ public class ViewManager {
         startButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                if(shipChoosen != null){
+                if (shipChoosen != null) {
                     GameViewManager gameViewManager = new GameViewManager();
                     gameViewManager.createNewGame(mainStage, shipChoosen);
                 }
