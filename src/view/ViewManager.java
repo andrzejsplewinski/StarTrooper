@@ -3,21 +3,26 @@ package view;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import model.*;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
 import static javafx.scene.layout.BackgroundSize.DEFAULT;
 
 public class ViewManager {
-
+    private final static String FONT_PATH = "src/model/resources/kenvector_future.ttf";
     private static final int HEIGHT = 900;
     private static final int WIDTH = 1600;
     private AnchorPane mainPane;
@@ -27,7 +32,6 @@ public class ViewManager {
     private final static int MENU_BUTTONS_STARTS_X = 100;
     private final static int MENU_BUTTONS_STARTS_Y = 150;
 
-    private GameSubScene creditsSubScene;
     private GameSubScene helpSubScene;
     private GameSubScene scoreSubScene;
     private GameSubScene shipChooseSubScene;
@@ -62,17 +66,9 @@ public class ViewManager {
     }
 
     private void createSubScene() {
-        creditsSubScene = new GameSubScene();
-        mainPane.getChildren().add(creditsSubScene);
-
-        helpSubScene = new GameSubScene();
-        mainPane.getChildren().add(helpSubScene);
-
-        scoreSubScene = new GameSubScene();
-        mainPane.getChildren().add(scoreSubScene);
-
         createShipChooserSubScene();
         createScoreSubScene();
+        createHelpSubScene();
     }
 
     private void createShipChooserSubScene() {
@@ -88,21 +84,62 @@ public class ViewManager {
         shipChooseSubScene.getPane().getChildren().add(createButtonToStart());
     }
 
-    private void createScoreSubScene() {
+    private void createHelpSubScene() {
+        helpSubScene = new GameSubScene();
+        mainPane.getChildren().add(helpSubScene);
 
+        InfoLabel infoLabel = new InfoLabel("KEYS IN THE GAME");
+        infoLabel.setLayoutX(110);
+        infoLabel.setLayoutY(25);
+
+        GameLabel label1 = new GameLabel("UP ARROW");
+        label1.setLayoutY(100);
+        label1.setLayoutX(110);
+        GameLabel label2 = new GameLabel("DOWN ARROW");
+        label2.setLayoutY(150);
+        label2.setLayoutX(110);
+        GameLabel label3 = new GameLabel("LEFT ARROW");
+        label3.setLayoutY(200);
+        label3.setLayoutX(110);
+        GameLabel label4 = new GameLabel("RIGHT ARROW");
+        label4.setLayoutY(250);
+        label4.setLayoutX(110);
+        GameLabel label5 = new GameLabel("PRESS SPACE TO SHOOT");
+        label5.setLayoutY(300);
+        label5.setLayoutX(110);
+
+        helpSubScene.getPane().getChildren().add(label1);
+        helpSubScene.getPane().getChildren().add(label2);
+        helpSubScene.getPane().getChildren().add(label3);
+        helpSubScene.getPane().getChildren().add(label4);
+        helpSubScene.getPane().getChildren().add(label5);
+        helpSubScene.getPane().getChildren().add(infoLabel);
+
+    }
+
+    private void createScoreSubScene() {
 
         scoreSubScene = new GameSubScene();
         mainPane.getChildren().add(scoreSubScene);
 
-        InfoLabel infoLabel = new InfoLabel("SCORES");
+        InfoLabel infoLabel = new InfoLabel("BEST SCORES");
         infoLabel.setLayoutX(110);
         infoLabel.setLayoutY(25);
+        GameViewManager gameViewManager = new GameViewManager();
+        String listItems = String.valueOf(gameViewManager.loadList());
+        GameLabel label = new GameLabel(listItems);
+        label.setLayoutX(110);
+        label.setLayoutY(100);
 
-        GameViewManager viewManager = new GameViewManager();
-        viewManager.loadList();
+        try {
+            label.setFont(Font.loadFont(new FileInputStream(new File(FONT_PATH)), 23));
+        } catch (FileNotFoundException e) {
+            label.setFont(Font.font("Verdana", 23));
+        }
+
 
         scoreSubScene.getPane().getChildren().add(infoLabel);
-
+        scoreSubScene.getPane().getChildren().add(label);
     }
 
     private HBox createShipsToChoose() {
@@ -164,7 +201,6 @@ public class ViewManager {
         createStartButton();
         createScoreButton();
         createHelpButton();
-        createCreditsButton();
         createExitButton();
     }
 
@@ -198,18 +234,6 @@ public class ViewManager {
             @Override
             public void handle(ActionEvent event) {
                 showSubScene(helpSubScene);
-            }
-        });
-    }
-
-    private void createCreditsButton() {
-        GameButtons creditsButton = new GameButtons("CREDITS");
-        addMenuButtons(creditsButton);
-
-        creditsButton.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                showSubScene(creditsSubScene);
             }
         });
     }

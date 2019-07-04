@@ -19,10 +19,10 @@ public class SmallInfoLabel extends Label {
     private final static String FONT_PATH = "src/model/resources/kenvector_future.ttf";
 
     public SmallInfoLabel(String text){
-        setPrefWidth(130);
+        setPrefWidth(170);
         setPrefHeight(50);
         BackgroundImage backgroundImage = new BackgroundImage(new Image("view/resources/buttonBlue.png",
-                130, 50 , false, true),
+                170, 50 , false, true),
                 BackgroundRepeat.NO_REPEAT,
                 BackgroundRepeat.NO_REPEAT,
                 BackgroundPosition.DEFAULT,

@@ -1,13 +1,10 @@
 package model;
 
-import javafx.animation.AnimationTimer;
-import javafx.animation.PathTransition;
-import javafx.event.EventHandler;
+import javafx.animation.*;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.shape.*;
@@ -18,6 +15,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.stream.IntStream;
 
 public class GameViewManager {
 
@@ -35,7 +33,6 @@ public class GameViewManager {
     private boolean isRightKeyPressed;
     private boolean isUpKeyPressed;
     private boolean isDownKeyPressed;
-    private boolean isSpaceKeyPressed;
 
     private int angle;
     private AnimationTimer gameTimer;
@@ -56,6 +53,8 @@ public class GameViewManager {
     private List<ImageView> playerLifes;
     private int playerLife;
     private int points;
+    private List<Integer> pointsList;
+    private int rankingPoints;
 
     private final static int SHIP_RADIUS = 30;
     private final static int STAR_RADIUS = 12;
@@ -68,8 +67,11 @@ public class GameViewManager {
     private final static String LASER_PLAYER_SHOOT_IMAGE = "view/resources/shipchooser/fire01.png";
     private ImageView laserImage;
     private List<Node> laser = new ArrayList<>();
-    private List<Node> enemyLaser;
 
+    private Duration firingInterval = Duration.millis(1000);
+    private Timeline firing = new Timeline(
+            new KeyFrame(Duration.ZERO, event -> fire()),
+            new KeyFrame(firingInterval));
 
     private final static String BLACK_ENEMIES_IMAGE = "view/resources/enemies/enemyBlack1.png";
     private final static String BLUE_ENEMIES_IMAGE = "view/resources/enemies/enemyBlue2.png";
@@ -96,44 +98,44 @@ public class GameViewManager {
         gameStage.setScene(gameScene);
     }
 
+    private void fire() {
+        laserImage = new ImageView(LASER_PLAYER_SHOOT_IMAGE);
+        Node newLaser = laserImage;
+        newLaser.relocate(ship.getLayoutX() + 48, ship.getLayoutY() - 20);
+        laser.add(newLaser);
+        gamePane.getChildren().add(newLaser);
+    }
+
+
     private void createKeyListeners() {
-        gameScene.setOnKeyPressed(new EventHandler<KeyEvent>() {
-            @Override
-            public void handle(KeyEvent event) {
-                if (event.getCode() == KeyCode.LEFT) {
-                    isLeftKeyPressed = true;
-                } else if (event.getCode() == KeyCode.RIGHT) {
-                    isRightKeyPressed = true;
-                } else if (event.getCode() == KeyCode.UP) {
-                    isUpKeyPressed = true;
-                } else if (event.getCode() == KeyCode.DOWN) {
-                    isDownKeyPressed = true;
-                } else if (event.getCode() == KeyCode.SPACE) {
-                    if (!isSpaceKeyPressed ){
-                        laserImage = new ImageView(LASER_PLAYER_SHOOT_IMAGE);
-                        Node newLaser = laserImage;
-                        newLaser.relocate(ship.getLayoutX() + 48, ship.getLayoutY() - 20);
-                        laser.add(newLaser);
-                        gamePane.getChildren().add(newLaser);
-                        isSpaceKeyPressed = true;
-                    }
-                }
+        gameScene.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.LEFT) {
+                isLeftKeyPressed = true;
+            } else if (event.getCode() == KeyCode.RIGHT) {
+                isRightKeyPressed = true;
+            } else if (event.getCode() == KeyCode.UP) {
+                isUpKeyPressed = true;
+            } else if (event.getCode() == KeyCode.DOWN) {
+                isDownKeyPressed = true;
+            } else if (event.getCode() == KeyCode.SPACE && firing.getStatus() != Animation.Status.RUNNING) {
+                firing.playFromStart();
+//                firing.setDelay(firingInterval);
+//                firing.setCycleCount(Animation.INDEFINITE);
+
             }
         });
-        gameScene.setOnKeyReleased(new EventHandler<KeyEvent>() {
-            @Override
-            public void handle(KeyEvent event) {
-                if (event.getCode() == KeyCode.LEFT) {
-                    isLeftKeyPressed = false;
-                } else if (event.getCode() == KeyCode.RIGHT) {
-                    isRightKeyPressed = false;
-                } else if (event.getCode() == KeyCode.UP) {
-                    isUpKeyPressed = false;
-                } else if (event.getCode() == KeyCode.DOWN) {
-                    isDownKeyPressed = false;
-                } else if (event.getCode() == KeyCode.SPACE) {
-                    isSpaceKeyPressed = false;
-                }
+
+        gameScene.setOnKeyReleased(event -> {
+            if (event.getCode() == KeyCode.LEFT) {
+                isLeftKeyPressed = false;
+            } else if (event.getCode() == KeyCode.RIGHT) {
+                isRightKeyPressed = false;
+            } else if (event.getCode() == KeyCode.UP) {
+                isUpKeyPressed = false;
+            } else if (event.getCode() == KeyCode.DOWN) {
+                isDownKeyPressed = false;
+            } else if (event.getCode() == KeyCode.SPACE) {
+                firing.stop();
             }
         });
     }
@@ -154,14 +156,14 @@ public class GameViewManager {
         setElementsOnPosition(star);
         gamePane.getChildren().add(star);
         pointsLabel = new SmallInfoLabel("Points : 00");
-        pointsLabel.setLayoutX(460);
+        pointsLabel.setLayoutX(420);
         pointsLabel.setLayoutY(60);
         gamePane.getChildren().add(pointsLabel);
         playerLifes = new ArrayList<>();
 
         for (int i = 0; i < 3; i++) {
             playerLifes.add(new ImageView(shipChossen.getUrlLife()));
-            playerLifes.get(i).setLayoutX(410 + (playerLifes.size() * 50));
+            playerLifes.get(i).setLayoutX(380 + (playerLifes.size() * 50));
             playerLifes.get(i).setLayoutY(120);
             gamePane.getChildren().add(playerLifes.get(i));
         }
@@ -204,10 +206,6 @@ public class GameViewManager {
         for (ImageView red : redEnemies) {
             gamePane.getChildren().add(red);
             initializeTransitionRedEnemies();
-        }
-
-        for (int i = 0; i < laser.size(); i++) {
-            gamePane.getChildren().add(laser.get(i));
         }
     }
 
@@ -255,16 +253,6 @@ public class GameViewManager {
             redEnemies.get(i).setLayoutY(redEnemies.get(i).getLayoutY() + 2);
 
         }
-//            if (redEnemies.get(i).getLayoutX() == ship.getLayoutX()) {
-//                laser = new ArrayList<>();
-//                laser.add(new ImageView(LASER_PLAYER_SHOOT_IMAGE));
-//                for (int k = 0; k < 1; k++) {
-//                    laser.get(k).setLayoutY(redEnemies.get(i).getLayoutY() - 20);
-//                    laser.get(k).setLayoutX(redEnemies.get(i).getLayoutX() + 50);
-//                    gamePane.getChildren().add(laser.get(k));
-//                }
-//            }
-
     }
 
     private void checkIfElementsAreBehindTheSceneAndRelocate() {
@@ -299,8 +287,8 @@ public class GameViewManager {
                 green.relocate(Math.random(), -300);
             }
         }
-        for (ImageView red : redEnemies){
-            if (red.getLayoutY() > 900){
+        for (ImageView red : redEnemies) {
+            if (red.getLayoutY() > 900) {
                 red.relocate(0, -300);
             }
         }
@@ -401,6 +389,7 @@ public class GameViewManager {
         gamePane.getChildren().add(gridPane2);
     }
 
+
     private void moveBackground() {
         gridPane1.setLayoutY(gridPane1.getLayoutY() + 0.5);
         gridPane2.setLayoutY(gridPane2.getLayoutY() + 0.5);
@@ -413,18 +402,26 @@ public class GameViewManager {
         }
     }
 
+    private void addPoints(int point) {
+        points += point;
+        pointsList = new ArrayList<>();
+        pointsList.add(points);
+        for (int i : pointsList) {
+            int sum = IntStream.of(i).sum();
+            String textToSet = "POINTS : ";
+            if (sum < 10) {
+                textToSet = textToSet + "0";
+            }
+            pointsLabel.setText(textToSet + sum);
+        }
+    }
+
     private void checkIfElementsCollide() {
 
         if (SHIP_RADIUS + STAR_RADIUS > calculateDistance(ship.getLayoutX() + 49, star.getLayoutX() + 15,
                 ship.getLayoutY() + 37, star.getLayoutY() + 15)) {
             setElementsOnPosition(star);
-
-            points++;
-            String textToSet = "POINTS : ";
-            if (points < 10) {
-                textToSet = textToSet + "0";
-            }
-            pointsLabel.setText(textToSet + points);
+            addPoints(3);
         }
 
         for (int i = 0; i < brownMeteors.size(); i++) {
@@ -448,6 +445,7 @@ public class GameViewManager {
             for (int k = 0; k < laser.size(); k++) {
                 if (METEOR_RADIUS + LASER_RADIUS > calculateDistance(brownMeteors.get(i).getLayoutX() + 20, laser.get(k).getLayoutX() + 12,
                         brownMeteors.get(i).getLayoutY() + 20, laser.get(k).getLayoutY() + 12)) {
+                    addPoints(1);
                     setElementsOnPosition(brownMeteors.get(i));
                     gamePane.getChildren().remove(laser.get(k));
                     laser.remove(k);
@@ -459,6 +457,7 @@ public class GameViewManager {
             for (int k = 0; k < laser.size(); k++) {
                 if (METEOR_RADIUS + LASER_RADIUS > calculateDistance(greyMeteors.get(i).getLayoutX() + 20, laser.get(k).getLayoutX() + 12,
                         greyMeteors.get(i).getLayoutY() + 20, laser.get(k).getLayoutY() + 12)) {
+                    addPoints(1);
                     setElementsOnPosition(greyMeteors.get(i));
                     gamePane.getChildren().remove(laser.get(k));
                     laser.remove(k);
@@ -471,6 +470,7 @@ public class GameViewManager {
             for (int k = 0; k < laser.size(); k++) {
                 if (ENEMY_RADIUS + LASER_RADIUS > calculateDistance(blackEnemies.get(i).getLayoutX() + 49, laser.get(k).getLayoutX() + 12,
                         blackEnemies.get(i).getLayoutY() + 37, laser.get(k).getLayoutY() + 12)) {
+                    addPoints(2);
                     setElementsOnPosition(blackEnemies.get(i));
                     gamePane.getChildren().remove(laser.get(k));
                     laser.remove(k);
@@ -491,6 +491,7 @@ public class GameViewManager {
             for (int k = 0; k < laser.size(); k++) {
                 if (ENEMY_RADIUS + LASER_RADIUS > calculateDistance(blueEnemies.get(i).getLayoutX() + 49, laser.get(k).getLayoutX() + 12,
                         blueEnemies.get(i).getLayoutY() + 37, laser.get(k).getLayoutY() + 12)) {
+                    addPoints(2);
                     setElementsOnPosition(blueEnemies.get(i));
                     gamePane.getChildren().remove(laser.get(k));
                     laser.remove(k);
@@ -510,6 +511,7 @@ public class GameViewManager {
         for (int i = 0; i < laser.size(); i++) {
             for (int k = 0; k < greenEnemies.size(); k++) {
                 if (laser.get(i).getBoundsInParent().intersects(greenEnemies.get(k).getBoundsInParent())) {
+                    addPoints(2);
                     greenEnemies.get(k).relocate(Math.random(), -300);
                     gamePane.getChildren().remove(laser.get(i));
                     laser.remove(i);
@@ -526,6 +528,7 @@ public class GameViewManager {
         for (int i = 0; i < laser.size(); i++) {
             for (int k = 0; k < redEnemies.size(); k++) {
                 if (laser.get(i).getBoundsInParent().intersects(redEnemies.get(k).getBoundsInParent())) {
+                    addPoints(2);
                     redEnemies.get(k).relocate(0, -300);
                     gamePane.getChildren().remove(laser.get(i));
                     laser.remove(i);
@@ -540,6 +543,9 @@ public class GameViewManager {
         }
     }
 
+    private double calculateDistance(double x1, double x2, double y1, double y2) {
+        return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
+    }
 
     private void removeLife() {
 
@@ -555,33 +561,30 @@ public class GameViewManager {
 
     public void saveList() {
         try {
-            ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(savedRankingList));
-            //rankingList = new ArrayList<>();
-            //rankingList.add(points);
-            outputStream.writeObject(String.valueOf(points));
-            outputStream.close();
+            FileOutputStream fos = new FileOutputStream(savedRankingList, true);
+            DataOutputStream oos = new DataOutputStream(fos);
+            oos.writeInt(points);
+            oos.close();
         } catch (Exception e) {
-            System.out.println("Unexpected exception: " + e);
+            System.out.println("Exception" + e);
         }
     }
 
-    public void loadList() {
+    public List<Integer> loadList() {
         try {
-            ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(savedRankingList));
-            Object list = inputStream.readObject();
-            System.out.println(list);
-            if (list instanceof ArrayList) {
-                rankingList.addAll((ArrayList) list);
+            ObjectInputStream ois = new ObjectInputStream(new FileInputStream(savedRankingList));
+            Object readList = ois.readObject();
+            if (readList instanceof ArrayList) {
+                rankingList.addAll((ArrayList) readList);
             }
-            inputStream.close();
+            ois.close();
         } catch (Exception e) {
-            System.out.println("wystąpił błąd: " + e);
+            System.out.println("Exception" + e);
         }
+        System.out.println(rankingList);
+        return rankingList;
     }
 
-    private double calculateDistance(double x1, double x2, double y1, double y2) {
-        return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
-    }
 
     public void initializeTransitionGreenEnemies() {
         for (ImageView green : greenEnemies) {
