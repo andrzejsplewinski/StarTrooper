@@ -11,6 +11,7 @@ import javafx.scene.shape.*;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
+import javax.swing.*;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -53,8 +54,8 @@ public class GameViewManager {
     private List<ImageView> playerLifes;
     private int playerLife;
     private int points;
-    private List<Integer> pointsList;
-    private int rankingPoints;
+    private String highscore = "";
+    private List<Integer> score;
 
     private final static int SHIP_RADIUS = 30;
     private final static int STAR_RADIUS = 12;
@@ -65,7 +66,8 @@ public class GameViewManager {
     private final static String GOLD_STAR_IMAGE = "view/resources/star_gold.png";
 
     private final static String LASER_PLAYER_SHOOT_IMAGE = "view/resources/shipchooser/fire01.png";
-    private ImageView laserImage;
+    private static final String HIGHSCORE_FILE = "ranking.list";
+
     private List<Node> laser = new ArrayList<>();
 
     private Duration firingInterval = Duration.millis(1000);
@@ -82,13 +84,82 @@ public class GameViewManager {
     private List<ImageView> greenEnemies;
     private List<ImageView> redEnemies;
 
-    private File savedRankingList = new File("ranking.list");
-    private List<Integer> rankingList;
-
     public GameViewManager() {
         initializeStage();
         createKeyListeners();
+        initializeHighScore();
         randomPositionGenerator = new Random();
+    }
+
+    private void initializeHighScore() {
+        if (highscore.equals("")) {
+            highscore = this.getHighScore();
+            System.out.println(getHighScore());
+        }
+    }
+//
+//    public int getScoreGame() {
+//        score = new ArrayList<>();
+//        score.add(points);
+//
+//        return
+//    }
+
+    public String getHighScore() {
+        BufferedReader reader = null;
+
+        try {
+            FileReader readFile = new FileReader(HIGHSCORE_FILE);
+            reader = new BufferedReader(readFile);
+            return reader.readLine();
+        } catch (FileNotFoundException e) {
+            return "None:0";
+        } catch (IOException e) {
+            System.out.println("Read exception: " + e);
+        } finally {
+            try {
+                if (reader != null)
+                    reader.close();
+            } catch (IOException e) {
+                System.out.println("Read exception: " + e);
+            }
+        }
+        return highscore;
+    }
+
+    private void checkHighScore() {
+        if (points > Integer.parseInt(highscore.split(":")[1])) {
+            String name = JOptionPane.showInputDialog("Please enter your name:");
+            highscore = name + ":" + points;
+
+            File scoreFile = new File(HIGHSCORE_FILE);
+            if (!scoreFile.exists()) {
+                try {
+                    scoreFile.createNewFile();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            BufferedWriter writer = null;
+
+            try {
+                FileWriter writerFile = new FileWriter(scoreFile, true);
+                writer = new BufferedWriter(writerFile);
+                writer.newLine();
+                writer.write(this.highscore);
+
+            } catch (IOException e) {
+                System.out.println("Write exception: " + e);
+            } finally {
+                if (writer != null) {
+                    try {
+                        writer.close();
+                    } catch (IOException e) {
+                        System.out.println("Write exception: " + e);
+                    }
+                }
+            }
+        }
     }
 
     private void initializeStage() {
@@ -99,13 +170,11 @@ public class GameViewManager {
     }
 
     private void fire() {
-        laserImage = new ImageView(LASER_PLAYER_SHOOT_IMAGE);
-        Node newLaser = laserImage;
+        Node newLaser = new ImageView(LASER_PLAYER_SHOOT_IMAGE);
         newLaser.relocate(ship.getLayoutX() + 48, ship.getLayoutY() - 20);
         laser.add(newLaser);
         gamePane.getChildren().add(newLaser);
     }
-
 
     private void createKeyListeners() {
         gameScene.setOnKeyPressed(event -> {
@@ -119,12 +188,8 @@ public class GameViewManager {
                 isDownKeyPressed = true;
             } else if (event.getCode() == KeyCode.SPACE && firing.getStatus() != Animation.Status.RUNNING) {
                 firing.playFromStart();
-//                firing.setDelay(firingInterval);
-//                firing.setCycleCount(Animation.INDEFINITE);
-
             }
         });
-
         gameScene.setOnKeyReleased(event -> {
             if (event.getCode() == KeyCode.LEFT) {
                 isLeftKeyPressed = false;
@@ -404,7 +469,7 @@ public class GameViewManager {
 
     private void addPoints(int point) {
         points += point;
-        pointsList = new ArrayList<>();
+        List<Integer> pointsList = new ArrayList<>();
         pointsList.add(points);
         for (int i : pointsList) {
             int sum = IntStream.of(i).sum();
@@ -552,39 +617,14 @@ public class GameViewManager {
         gamePane.getChildren().remove(playerLifes.get(playerLife));
         playerLife--;
         if (playerLife < 0) {
-            saveList();
             gameStage.close();
             gameTimer.stop();
             menuStage.show();
+//            getScoreGame();
+            System.out.println(score);
+            checkHighScore();
         }
     }
-
-    public void saveList() {
-        try {
-            FileOutputStream fos = new FileOutputStream(savedRankingList, true);
-            DataOutputStream oos = new DataOutputStream(fos);
-            oos.writeInt(points);
-            oos.close();
-        } catch (Exception e) {
-            System.out.println("Exception" + e);
-        }
-    }
-
-    public List<Integer> loadList() {
-        try {
-            ObjectInputStream ois = new ObjectInputStream(new FileInputStream(savedRankingList));
-            Object readList = ois.readObject();
-            if (readList instanceof ArrayList) {
-                rankingList.addAll((ArrayList) readList);
-            }
-            ois.close();
-        } catch (Exception e) {
-            System.out.println("Exception" + e);
-        }
-        System.out.println(rankingList);
-        return rankingList;
-    }
-
 
     public void initializeTransitionGreenEnemies() {
         for (ImageView green : greenEnemies) {

@@ -3,7 +3,6 @@ package view;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -118,16 +117,15 @@ public class ViewManager {
     }
 
     private void createScoreSubScene() {
-
         scoreSubScene = new GameSubScene();
         mainPane.getChildren().add(scoreSubScene);
 
         InfoLabel infoLabel = new InfoLabel("BEST SCORES");
         infoLabel.setLayoutX(110);
         infoLabel.setLayoutY(25);
-        GameViewManager gameViewManager = new GameViewManager();
-        String listItems = String.valueOf(gameViewManager.loadList());
-        GameLabel label = new GameLabel(listItems);
+
+        GameViewManager manager = new GameViewManager();
+        GameLabel label = new GameLabel(manager.getHighScore());
         label.setLayoutX(110);
         label.setLayoutY(100);
 
@@ -136,7 +134,6 @@ public class ViewManager {
         } catch (FileNotFoundException e) {
             label.setFont(Font.font("Verdana", 23));
         }
-
 
         scoreSubScene.getPane().getChildren().add(infoLabel);
         scoreSubScene.getPane().getChildren().add(label);
