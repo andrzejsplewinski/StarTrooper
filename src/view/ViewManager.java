@@ -33,6 +33,7 @@ public class ViewManager {
     private SHIP shipChoosen;
 
     public ViewManager() {
+
         menuButtons = new ArrayList<>();
         mainPane = new AnchorPane();
         Scene mainScene = new Scene(mainPane, WIDTH, HEIGHT);
@@ -81,20 +82,20 @@ public class ViewManager {
         infoLabel.setLayoutY(25);
 
         GameLabel label1 = new GameLabel("UP ARROW");
-        label1.setLayoutY(100);
-        label1.setLayoutX(110);
+        label1.setLayoutY(90);
+        label1.setLayoutX(40);
         GameLabel label2 = new GameLabel("DOWN ARROW");
         label2.setLayoutY(150);
-        label2.setLayoutX(110);
+        label2.setLayoutX(40);
         GameLabel label3 = new GameLabel("LEFT ARROW");
-        label3.setLayoutY(200);
-        label3.setLayoutX(110);
+        label3.setLayoutY(210);
+        label3.setLayoutX(40);
         GameLabel label4 = new GameLabel("RIGHT ARROW");
-        label4.setLayoutY(250);
-        label4.setLayoutX(110);
+        label4.setLayoutY(270);
+        label4.setLayoutX(40);
         GameLabel label5 = new GameLabel("PRESS SPACE TO SHOOT");
-        label5.setLayoutY(300);
-        label5.setLayoutX(110);
+        label5.setLayoutY(330);
+        label5.setLayoutX(40);
 
         helpSubScene.getPane().getChildren().add(label1);
         helpSubScene.getPane().getChildren().add(label2);
@@ -112,30 +113,31 @@ public class ViewManager {
         InfoLabel infoLabel = new InfoLabel("BEST SCORES");
         infoLabel.setLayoutX(110);
         infoLabel.setLayoutY(25);
+        scoreSubScene.getPane().getChildren().add(infoLabel);
 
         GameViewManager manager = new GameViewManager();
 
         List<Map.Entry<String, Integer>> list = new LinkedList<>(manager.sortedScoreMap.entrySet());
         list.sort(Map.Entry.comparingByValue(Comparator.reverseOrder()));
 
-        GameLabel label1 = new GameLabel("Name: " + list.get(0).toString().replace("=", "   Score: "));
-        label1.setLayoutX(20);
-        label1.setLayoutY(120);
-
-        GameLabel label2 = new GameLabel("Name: " + list.get(1).toString().replace("=", "   Score: "));
-        label2.setLayoutX(20);
-        label2.setLayoutY(190);
-
-        GameLabel label3 = new GameLabel("Name: " + list.get(2).toString().replace("=", "   Score: "));
-        label3.setLayoutX(20);
-        label3.setLayoutY(260);
-
-
-        scoreSubScene.getPane().getChildren().add(infoLabel);
-        scoreSubScene.getPane().getChildren().add(label1);
-        scoreSubScene.getPane().getChildren().add(label2);
-        scoreSubScene.getPane().getChildren().add(label3);
-
+        if (!list.isEmpty()) {
+            GameLabel label1 = new GameLabel("Name: " + list.get(0).toString().replace("=", "   Score: "));
+            label1.setLayoutX(40);
+            label1.setLayoutY(120);
+            scoreSubScene.getPane().getChildren().add(label1);
+        }
+        if (list.size() >= 2) {
+            GameLabel label2 = new GameLabel("Name: " + list.get(1).toString().replace("=", "   Score: "));
+            label2.setLayoutX(40);
+            label2.setLayoutY(190);
+            scoreSubScene.getPane().getChildren().add(label2);
+        }
+        if (list.size() >= 3) {
+            GameLabel label3 = new GameLabel("Name: " + list.get(2).toString().replace("=", "   Score: "));
+            label3.setLayoutX(40);
+            label3.setLayoutY(260);
+            scoreSubScene.getPane().getChildren().add(label3);
+        }
     }
 
     private HBox createShipsToChoose() {

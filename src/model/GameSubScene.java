@@ -8,7 +8,6 @@ import javafx.util.Duration;
 
 public class GameSubScene extends SubScene {
 
-    private final static String FONT_PATH = "src/model/resources/kenvector_future.ttf";
     private final static String BACKGROUND_IMAGE = "model/resources/blue_panel.png";
 
     private boolean isHidden;

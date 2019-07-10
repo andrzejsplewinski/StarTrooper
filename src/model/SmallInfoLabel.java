@@ -18,28 +18,27 @@ public class SmallInfoLabel extends Label {
 
     private final static String FONT_PATH = "src/model/resources/kenvector_future.ttf";
 
-    public SmallInfoLabel(String text){
+    public SmallInfoLabel(String text) {
         setPrefWidth(170);
         setPrefHeight(50);
         BackgroundImage backgroundImage = new BackgroundImage(new Image("view/resources/buttonBlue.png",
-                170, 50 , false, true),
+                170, 50, false, true),
                 BackgroundRepeat.NO_REPEAT,
                 BackgroundRepeat.NO_REPEAT,
                 BackgroundPosition.DEFAULT,
                 null);
         setBackground(new Background(backgroundImage));
         setAlignment(Pos.CENTER_LEFT);
-        setPadding(new Insets(10,10, 10,10));
+        setPadding(new Insets(10, 10, 10, 10));
         setLabelFont();
         setText(text);
     }
 
-    private void setLabelFont(){
+    private void setLabelFont() {
         try {
             setFont(Font.loadFont(new FileInputStream(new File(FONT_PATH)), 15));
         } catch (FileNotFoundException e) {
             setFont(Font.font("Verdana", 15));
         }
     }
-
 }

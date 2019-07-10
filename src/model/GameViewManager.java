@@ -170,7 +170,6 @@ public class GameViewManager {
         }
     }
 
-
     private void initializeStage() {
         gamePane = new AnchorPane();
         gameScene = new Scene(gamePane, GAME_WIDTH, GAME_HEIGHT);
@@ -501,7 +500,6 @@ public class GameViewManager {
                     ship.getLayoutY() + 37, brownMeteor.getLayoutY() + 20)) {
                 removeLife();
                 setElementsOnPosition(brownMeteor);
-
             }
         }
 
@@ -533,7 +531,6 @@ public class GameViewManager {
                     setElementsOnPosition(greyMeteor);
                     gamePane.getChildren().remove(laser.get(k));
                     laser.remove(k);
-
                 }
             }
         }
@@ -546,7 +543,6 @@ public class GameViewManager {
                     setElementsOnPosition(blackEnemy);
                     gamePane.getChildren().remove(laser.get(k));
                     laser.remove(k);
-
                 }
             }
         }
@@ -567,7 +563,6 @@ public class GameViewManager {
                     setElementsOnPosition(blueEnemy);
                     gamePane.getChildren().remove(laser.get(k));
                     laser.remove(k);
-
                 }
             }
         }
@@ -624,10 +619,11 @@ public class GameViewManager {
         gamePane.getChildren().remove(playerLifes.get(playerLife));
         playerLife--;
         if (playerLife < 0) {
+            getScoreGame();
             gameStage.close();
             gameTimer.stop();
             menuStage.show();
-            getScoreGame();
+
         }
     }
 

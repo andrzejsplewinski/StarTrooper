@@ -2,22 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec0a164c-90b0-4f53-8e19-1499bcdef361" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/model/GameLabel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/model/GameLabel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/model/GameViewManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/model/GameViewManager$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/model/GameViewManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/model/GameViewManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$7.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$8.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ranking.list" beforeDir="false" afterPath="$PROJECT_DIR$/ranking.list" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/GameLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/GameLabel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/GameButtons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/GameButtons.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/GameSubScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/GameSubScene.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/GameViewManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/GameViewManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ShipPicker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ShipPicker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/SmallInfoLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/SmallInfoLabel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/ViewManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ViewManager.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -38,7 +28,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/game/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
+            <state relative-caret-position="435">
               <caret line="26" selection-start-line="26" selection-end-line="26" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -50,10 +40,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/ViewManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="338">
+              <caret line="41" column="8" lean-forward="true" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="25" />
               <folding>
-                <element signature="e#5833#5834#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#6037#6038#0" expanded="true" />
+                <element signature="e#6069#6070#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -62,8 +54,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/model/GameViewManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="292" selection-start-line="292" selection-end-line="292" />
+            <state relative-caret-position="-1503">
+              <caret line="564" column="36" selection-start-line="564" selection-start-column="36" selection-end-line="564" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -86,7 +78,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>laserShoo</find>
       <find>blackEnemies</find>
       <find>rankingList</find>
       <find>laserShoot</find>
@@ -116,6 +107,7 @@
       <find>ViewManager</find>
       <find>gamevi</find>
       <find>checkHighScore</find>
+      <find>createScoreSubScene</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -124,24 +116,24 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/model/GameButtons.java" />
         <option value="$PROJECT_DIR$/src/model/GameSubscene.java" />
-        <option value="$PROJECT_DIR$/src/model/ShipPicker.java" />
         <option value="$PROJECT_DIR$/src/model/SHIP.java" />
         <option value="$PROJECT_DIR$/src/model/FXMLDocumentControl.java" />
         <option value="$PROJECT_DIR$/src/game/ranking/ranking.list" />
         <option value="$PROJECT_DIR$/src/model/Label.java" />
         <option value="$PROJECT_DIR$/src/model/InfoLabel.java" />
-        <option value="$PROJECT_DIR$/src/model/GameSubScene.java" />
-        <option value="$PROJECT_DIR$/src/model/SmallInfoLabel.java" />
         <option value="$PROJECT_DIR$/src/model/HighscoreManagerTest.java" />
         <option value="$PROJECT_DIR$/src/test/model/HighscoreManagerTest.java" />
         <option value="$PROJECT_DIR$/src/game/Main.java" />
         <option value="$PROJECT_DIR$/src/model/HighscoreManager.java" />
         <option value="$PROJECT_DIR$/src/model/HighScore.java" />
         <option value="$PROJECT_DIR$/src/model/ScoreComparator.java" />
-        <option value="$PROJECT_DIR$/ranking.list" />
         <option value="$PROJECT_DIR$/src/model/GameLabel.java" />
+        <option value="$PROJECT_DIR$/src/model/GameButtons.java" />
+        <option value="$PROJECT_DIR$/src/model/GameSubScene.java" />
+        <option value="$PROJECT_DIR$/src/model/ShipPicker.java" />
+        <option value="$PROJECT_DIR$/src/model/SmallInfoLabel.java" />
+        <option value="$PROJECT_DIR$/ranking.list" />
         <option value="$PROJECT_DIR$/src/view/ViewManager.java" />
         <option value="$PROJECT_DIR$/src/model/GameViewManager.java" />
       </list>
@@ -172,12 +164,6 @@
               <item name="GameApllication" type="b2602c69:ProjectViewProjectNode" />
               <item name="GameApllication" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GameApllication" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GameApllication" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -282,7 +268,7 @@
       <workItem from="1562593626277" duration="331000" />
       <workItem from="1562594023872" duration="14112000" />
       <workItem from="1562646474758" duration="1630000" />
-      <workItem from="1562775512599" duration="5891000" />
+      <workItem from="1562775512599" duration="8973000" />
     </task>
     <servers />
   </component>
@@ -310,7 +296,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="213961000" />
+    <option name="totallyTimeSpent" value="217043000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -396,44 +382,9 @@
     <entry file="file://$PROJECT_DIR$/src/view/resources/blue_button13.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/ShipPicker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="49" column="1" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#844#845#0" expanded="true" />
-            <element signature="e#871#872#0" expanded="true" />
-            <element signature="e#911#912#0" expanded="true" />
-            <element signature="e#949#950#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/SHIP.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-          <folding>
-            <element signature="e#760#761#0" expanded="true" />
-            <element signature="e#790#791#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/FXMLDocumentControl.java" />
     <entry file="file://$PROJECT_DIR$/src/game/ranking/ranking.txt" />
     <entry file="file://$PROJECT_DIR$/src/model/Label.java" />
-    <entry file="file://$PROJECT_DIR$/src/model/GameButtons.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_144/javafx-src.zip!/javafx/event/EventHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -452,16 +403,6 @@
     <entry file="file://$PROJECT_DIR$/src/view/resources/buttonBlue.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/InfoLabel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/HighscoreManagerTest.java" />
     <entry file="file://$PROJECT_DIR$/src/test/model/HighscoreManagerTest.java" />
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_144/src.zip!/java/lang/Comparable.java">
@@ -471,24 +412,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/SmallInfoLabel.java">
+    <entry file="file://$PROJECT_DIR$/src/model/GameButtons.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+        <state relative-caret-position="340">
+          <caret line="20" column="36" lean-forward="true" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/GameSubScene.java">
+    <entry file="file://$PROJECT_DIR$/src/model/GameLabel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="33" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
+        <state relative-caret-position="234">
+          <caret line="25" column="23" lean-forward="true" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1447#1448#0" expanded="true" />
-            <element signature="e#1497#1498#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/ShipPicker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="22" column="44" lean-forward="true" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#702#703#0" expanded="true" />
+            <element signature="e#729#730#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/SHIP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+          <folding>
+            <element signature="e#760#761#0" expanded="true" />
+            <element signature="e#790#791#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -503,6 +465,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/InfoLabel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/HighscoreManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="503">
@@ -512,32 +484,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/HighScore.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/GameSubScene.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1447#1448#0" expanded="true" />
+            <element signature="e#1497#1498#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ranking.list">
+    <entry file="file://$PROJECT_DIR$/src/model/SmallInfoLabel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="248">
+          <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/GameLabel.java">
+    <entry file="file://$PROJECT_DIR$/ranking.list">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+        <state relative-caret-position="435">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -546,18 +526,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/ViewManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="338">
+          <caret line="41" column="8" lean-forward="true" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="25" />
           <folding>
-            <element signature="e#5833#5834#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#6037#6038#0" expanded="true" />
+            <element signature="e#6069#6070#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/GameViewManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="292" selection-start-line="292" selection-end-line="292" />
+        <state relative-caret-position="-1503">
+          <caret line="564" column="36" selection-start-line="564" selection-start-column="36" selection-end-line="564" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
