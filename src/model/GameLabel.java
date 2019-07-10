@@ -19,24 +19,20 @@ public class GameLabel extends Label {
     private final static String BACKGROUND_IMAGE = "view/resources/blue_button13.png";
 
     public GameLabel(String text) {
-        setPrefWidth(380);
+        setPrefWidth(520);
         setPrefHeight(49);
         setText(text);
         setWrapText(true);
         setLabelFont();
         setAlignment(Pos.CENTER);
 
-
-        BackgroundImage backgroundImage = new BackgroundImage(new Image(BACKGROUND_IMAGE, 380, 49, false, true),
+        BackgroundImage backgroundImage = new BackgroundImage(new Image(BACKGROUND_IMAGE, 520, 49, false, true),
                 BackgroundRepeat.NO_REPEAT,
                 BackgroundRepeat.NO_REPEAT,
                 BackgroundPosition.DEFAULT,
                 null);
         setBackground(new Background(backgroundImage));
-
-
     }
-
 
     private void setLabelFont() {
         try {

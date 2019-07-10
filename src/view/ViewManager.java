@@ -1,31 +1,21 @@
 package view;
 
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
-import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import model.*;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 import static javafx.scene.layout.BackgroundSize.DEFAULT;
 
 public class ViewManager {
-    private final static String FONT_PATH = "src/model/resources/kenvector_future.ttf";
     private static final int HEIGHT = 900;
     private static final int WIDTH = 1600;
     private AnchorPane mainPane;
-    private Scene mainScene;
     private Stage mainStage;
 
     private final static int MENU_BUTTONS_STARTS_X = 100;
@@ -37,16 +27,15 @@ public class ViewManager {
 
     private GameSubScene sceneToHide;
 
-    List<GameButtons> menuButtons;
+    private List<GameButtons> menuButtons;
 
-    List<ShipPicker> shipList;
+    private List<ShipPicker> shipList;
     private SHIP shipChoosen;
-    private List<GameViewManager> rankingList;
 
     public ViewManager() {
         menuButtons = new ArrayList<>();
         mainPane = new AnchorPane();
-        mainScene = new Scene(mainPane, WIDTH, HEIGHT);
+        Scene mainScene = new Scene(mainPane, WIDTH, HEIGHT);
         mainStage = new Stage();
         mainStage.setScene(mainScene);
         createSubScene();
@@ -125,18 +114,28 @@ public class ViewManager {
         infoLabel.setLayoutY(25);
 
         GameViewManager manager = new GameViewManager();
-        GameLabel label = new GameLabel(manager.getHighScore());
-        label.setLayoutX(110);
-        label.setLayoutY(100);
 
-        try {
-            label.setFont(Font.loadFont(new FileInputStream(new File(FONT_PATH)), 23));
-        } catch (FileNotFoundException e) {
-            label.setFont(Font.font("Verdana", 23));
-        }
+        List<Map.Entry<String, Integer>> list = new LinkedList<>(manager.sortedScoreMap.entrySet());
+        list.sort(Map.Entry.comparingByValue(Comparator.reverseOrder()));
+
+        GameLabel label1 = new GameLabel("Name: " + list.get(0).toString().replace("=", "   Score: "));
+        label1.setLayoutX(20);
+        label1.setLayoutY(120);
+
+        GameLabel label2 = new GameLabel("Name: " + list.get(1).toString().replace("=", "   Score: "));
+        label2.setLayoutX(20);
+        label2.setLayoutY(190);
+
+        GameLabel label3 = new GameLabel("Name: " + list.get(2).toString().replace("=", "   Score: "));
+        label3.setLayoutX(20);
+        label3.setLayoutY(260);
+
 
         scoreSubScene.getPane().getChildren().add(infoLabel);
-        scoreSubScene.getPane().getChildren().add(label);
+        scoreSubScene.getPane().getChildren().add(label1);
+        scoreSubScene.getPane().getChildren().add(label2);
+        scoreSubScene.getPane().getChildren().add(label3);
+
     }
 
     private HBox createShipsToChoose() {
@@ -147,15 +146,12 @@ public class ViewManager {
             ShipPicker shipToPick = new ShipPicker(ship);
             shipList.add(shipToPick);
             box.getChildren().add(shipToPick);
-            shipToPick.setOnMouseClicked(new EventHandler<MouseEvent>() {
-                @Override
-                public void handle(MouseEvent event) {
-                    for (ShipPicker ship : shipList) {
-                        ship.setCircleChoosen(false);
-                    }
-                    shipToPick.setCircleChoosen(true);
-                    shipChoosen = shipToPick.getShip();
+            shipToPick.setOnMouseClicked(event -> {
+                for (ShipPicker ship1 : shipList) {
+                    ship1.setCircleChoosen(false);
                 }
+                shipToPick.setCircleChoosen(true);
+                shipChoosen = shipToPick.getShip();
             });
         }
         box.setLayoutX(50);
@@ -168,13 +164,10 @@ public class ViewManager {
         startButton.setLayoutX(350);
         startButton.setLayoutY(300);
 
-        startButton.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                if (shipChoosen != null) {
-                    GameViewManager gameViewManager = new GameViewManager();
-                    gameViewManager.createNewGame(mainStage, shipChoosen);
-                }
+        startButton.setOnAction(event -> {
+            if (shipChoosen != null) {
+                GameViewManager gameViewManager = new GameViewManager();
+                gameViewManager.createNewGame(mainStage, shipChoosen);
             }
         });
 
@@ -205,46 +198,26 @@ public class ViewManager {
         GameButtons startButton = new GameButtons("START");
         addMenuButtons(startButton);
 
-        startButton.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                showSubScene(shipChooseSubScene);
-            }
-        });
+        startButton.setOnAction(event -> showSubScene(shipChooseSubScene));
     }
 
     private void createScoreButton() {
         GameButtons scoreButton = new GameButtons("SCORES");
         addMenuButtons(scoreButton);
-        scoreButton.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                showSubScene(scoreSubScene);
-            }
-        });
+        scoreButton.setOnAction(event -> showSubScene(scoreSubScene));
     }
 
     private void createHelpButton() {
         GameButtons helpButton = new GameButtons("HELP");
         addMenuButtons(helpButton);
-        helpButton.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                showSubScene(helpSubScene);
-            }
-        });
+        helpButton.setOnAction(event -> showSubScene(helpSubScene));
     }
 
     private void createExitButton() {
         GameButtons exitButton = new GameButtons("EXIT");
         addMenuButtons(exitButton);
 
-        exitButton.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                mainStage.close();
-            }
-        });
+        exitButton.setOnAction(event -> mainStage.close());
     }
 
     private void createBackground() {
@@ -262,19 +235,9 @@ public class ViewManager {
         logo.setLayoutX(350);
         logo.setLayoutY(100);
 
-        logo.setOnMouseEntered(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                logo.setEffect(new DropShadow());
-            }
-        });
+        logo.setOnMouseEntered(event -> logo.setEffect(new DropShadow()));
 
-        logo.setOnMouseExited(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                logo.setEffect(null);
-            }
-        });
+        logo.setOnMouseExited(event -> logo.setEffect(null));
         mainPane.getChildren().add(logo);
     }
 }

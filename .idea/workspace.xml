@@ -2,27 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec0a164c-90b0-4f53-8e19-1499bcdef361" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/model/HighScore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/HighscoreManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/ScoreComparator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameApllication.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GameApllication.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/game/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/game/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/game/ranking/ranking.list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/model/GameLabel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/model/GameLabel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GameApllication/model/GameViewManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/model/GameViewManager$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GameApllication/model/GameViewManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/model/GameViewManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager$8.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ranking.list" beforeDir="false" afterPath="$PROJECT_DIR$/ranking.list" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/ranking/ranking.list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/GameLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/GameLabel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/GameViewManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/GameViewManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/ViewManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ViewManager.java" afterDir="false" />
     </list>
@@ -44,8 +38,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/game/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="20" column="44" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="44" />
+            <state relative-caret-position="408">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -56,10 +50,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/ViewManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-308">
-              <caret line="118" column="40" selection-start-line="118" selection-start-column="40" selection-end-line="118" selection-end-column="40" />
+            <state relative-caret-position="187">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#5833#5834#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -68,68 +62,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/model/GameViewManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="148" column="45" selection-start-line="148" selection-start-column="45" selection-end-line="148" selection-end-column="45" />
+            <state relative-caret-position="281">
+              <caret line="292" selection-start-line="292" selection-end-line="292" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5132#5345#0" />
-                <element signature="e#5351#5593#0" />
-                <element signature="e#5599#6800#0" />
-                <element signature="e#6806#7095#0" />
-                <element signature="e#7101#9353#0" />
-                <element signature="e#9360#10964#0" />
-                <element signature="e#10970#12157#0" />
-                <element signature="e#12163#12360#0" />
-                <element signature="e#12366#12603#0" />
-                <element signature="e#12609#13010#0" />
-                <element signature="e#13016#14435#0" />
-                <element signature="e#14441#15138#0" />
-                <element signature="e#15145#15497#0" />
-                <element signature="e#15503#15926#0" />
-                <element signature="e#15932#21552#0" />
-                <element signature="e#21558#21713#0" />
-                <element signature="e#22230#22990#0" />
-                <element signature="e#22996#23809#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/HighscoreManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="503">
-              <caret line="62" column="47" selection-start-line="62" selection-start-column="47" selection-end-line="62" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/ScoreComparator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-              <folding>
-                <element signature="e#0#300#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ranking.list">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="7" lean-forward="true" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/HighScore.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -149,7 +86,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>width</find>
       <find>laserShoo</find>
       <find>blackEnemies</find>
       <find>rankingList</find>
@@ -179,6 +115,7 @@
       <find>sum</find>
       <find>ViewManager</find>
       <find>gamevi</find>
+      <find>checkHighScore</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -195,17 +132,17 @@
         <option value="$PROJECT_DIR$/src/game/ranking/ranking.list" />
         <option value="$PROJECT_DIR$/src/model/Label.java" />
         <option value="$PROJECT_DIR$/src/model/InfoLabel.java" />
-        <option value="$PROJECT_DIR$/src/model/GameLabel.java" />
         <option value="$PROJECT_DIR$/src/model/GameSubScene.java" />
         <option value="$PROJECT_DIR$/src/model/SmallInfoLabel.java" />
         <option value="$PROJECT_DIR$/src/model/HighscoreManagerTest.java" />
         <option value="$PROJECT_DIR$/src/test/model/HighscoreManagerTest.java" />
-        <option value="$PROJECT_DIR$/src/view/ViewManager.java" />
         <option value="$PROJECT_DIR$/src/game/Main.java" />
         <option value="$PROJECT_DIR$/src/model/HighscoreManager.java" />
         <option value="$PROJECT_DIR$/src/model/HighScore.java" />
         <option value="$PROJECT_DIR$/src/model/ScoreComparator.java" />
         <option value="$PROJECT_DIR$/ranking.list" />
+        <option value="$PROJECT_DIR$/src/model/GameLabel.java" />
+        <option value="$PROJECT_DIR$/src/view/ViewManager.java" />
         <option value="$PROJECT_DIR$/src/model/GameViewManager.java" />
       </list>
     </option>
@@ -224,7 +161,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -247,6 +183,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -341,7 +278,11 @@
       <workItem from="1561653408877" duration="14351000" />
       <workItem from="1561799348930" duration="14794000" />
       <workItem from="1562261782929" duration="32597000" />
-      <workItem from="1562505810109" duration="1200000" />
+      <workItem from="1562505810109" duration="11501000" />
+      <workItem from="1562593626277" duration="331000" />
+      <workItem from="1562594023872" duration="14112000" />
+      <workItem from="1562646474758" duration="1630000" />
+      <workItem from="1562775512599" duration="5891000" />
     </task>
     <servers />
   </component>
@@ -369,7 +310,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="181696000" />
+    <option name="totallyTimeSpent" value="213961000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -384,7 +325,39 @@
     <frame x="57" y="-7" width="1486" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4991453" visible="true" weight="0.15848528" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4991453" visible="true" weight="0.16269284" />
+      <window_info id="Structure" order="1" sideWeight="0.50085473" side_tool="true" weight="0.15638149" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" sideWeight="0.50085473" side_tool="true" weight="0.15638149" />
+      <window_info anchor="bottom" id="Inspection Results" weight="0.3297587" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3297587" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21581769" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3994638" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3297587" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3297587" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3297587" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.3297587" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.3297587" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Maven" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4991453" visible="true" weight="0.16269284" />
       <window_info id="Structure" order="1" sideWeight="0.50085473" side_tool="true" weight="0.15638149" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -402,7 +375,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.3297587" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.3297587" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3297587" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -413,7 +386,7 @@
       <window_info anchor="right" id="Maven" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -498,16 +471,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/GameLabel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/SmallInfoLabel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="129">
@@ -530,23 +493,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="20" column="44" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/HighScore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/ScoreComparator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -564,47 +510,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/ViewManager.java">
+    <entry file="file://$PROJECT_DIR$/src/model/HighScore.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-308">
-          <caret line="118" column="40" selection-start-line="118" selection-start-column="40" selection-end-line="118" selection-end-column="40" />
+        <state relative-caret-position="170">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ranking.list">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ranking.list">
+    <entry file="file://$PROJECT_DIR$/src/model/GameLabel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="7" lean-forward="true" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+        <state relative-caret-position="268">
+          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/ViewManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#5833#5834#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/GameViewManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="148" column="45" selection-start-line="148" selection-start-column="45" selection-end-line="148" selection-end-column="45" />
+        <state relative-caret-position="281">
+          <caret line="292" selection-start-line="292" selection-end-line="292" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5132#5345#0" />
-            <element signature="e#5351#5593#0" />
-            <element signature="e#5599#6800#0" />
-            <element signature="e#6806#7095#0" />
-            <element signature="e#7101#9353#0" />
-            <element signature="e#9360#10964#0" />
-            <element signature="e#10970#12157#0" />
-            <element signature="e#12163#12360#0" />
-            <element signature="e#12366#12603#0" />
-            <element signature="e#12609#13010#0" />
-            <element signature="e#13016#14435#0" />
-            <element signature="e#14441#15138#0" />
-            <element signature="e#15145#15497#0" />
-            <element signature="e#15503#15926#0" />
-            <element signature="e#15932#21552#0" />
-            <element signature="e#21558#21713#0" />
-            <element signature="e#22230#22990#0" />
-            <element signature="e#22996#23809#0" />
           </folding>
         </state>
       </provider>
