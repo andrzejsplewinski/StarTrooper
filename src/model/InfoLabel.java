@@ -19,7 +19,6 @@ public class InfoLabel extends Label {
     private final static String BACKGROUND_IMAGE = "view/resources/blue_button13.png";
 
     public InfoLabel(String text){
-
         setPrefWidth(380);
         setPrefHeight(49);
         setText(text);
@@ -27,17 +26,15 @@ public class InfoLabel extends Label {
         setLabelFont();
         setAlignment(Pos.CENTER);
 
-
-        BackgroundImage backgroundImage = new BackgroundImage(new Image(BACKGROUND_IMAGE, 380, 49, false, true),
+        Image image = new Image(BACKGROUND_IMAGE, 380, 49, false, true);
+        BackgroundImage backgroundImage = new BackgroundImage(
+                image,
                 BackgroundRepeat.NO_REPEAT,
                 BackgroundRepeat.NO_REPEAT,
                 BackgroundPosition.DEFAULT,
                 null);
         setBackground(new Background(backgroundImage));
-
-
     }
-
 
     private void setLabelFont(){
         try {

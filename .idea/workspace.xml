@@ -2,12 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec0a164c-90b0-4f53-8e19-1499bcdef361" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/out/production/GameApllication/model/GameBackground.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/GameApllication/model/Score.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/GameApllication/model/ScoreManager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/GameBackground.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/META-INF/GameApllication.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/game/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/game/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/model/GameSubScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/model/GameSubScene.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/model/GameViewManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/model/GameViewManager$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/model/GameViewManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/model/GameViewManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/model/HighScore.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/model/InfoLabel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/model/InfoLabel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/model/SHIP.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/model/SHIP.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/model/ShipPicker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/model/ShipPicker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameApllication/view/ViewManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ranking.list" beforeDir="false" afterPath="$PROJECT_DIR$/ranking.list" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/GameButtons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/GameButtons.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/GameViewManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/GameViewManager.java" afterDir="false" />
+    </list>
+    <list id="aee67389-5fa3-4dce-83ab-cf2908a11d6c" name="star trooper refactor" comment="">
+      <change afterPath="$PROJECT_DIR$/src/model/Score.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/ScoreManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/GameSubScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/GameSubScene.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/GameViewManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/GameViewManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/HighScore.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/HighscoreManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/InfoLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/InfoLabel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/SHIP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/SHIP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ScoreComparator.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ShipPicker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ShipPicker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/SmallInfoLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/SmallInfoLabel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/ViewManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ViewManager.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -28,8 +52,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/game/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="323">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -40,12 +64,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/ViewManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="41" column="8" lean-forward="true" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="25" />
+            <state relative-caret-position="179">
+              <caret line="176" column="32" selection-start-line="176" selection-start-column="32" selection-end-line="176" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#6037#6038#0" expanded="true" />
-                <element signature="e#6069#6070#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -54,11 +76,43 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/model/GameViewManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1503">
-              <caret line="564" column="36" selection-start-line="564" selection-start-column="36" selection-end-line="564" selection-end-column="36" />
+            <state relative-caret-position="796">
+              <caret line="453" lean-forward="true" selection-start-line="453" selection-end-line="453" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#10493#10808#0" expanded="true" />
+                <element signature="e#10807#10808#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/GameBackground.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/Score.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/ScoreManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -78,9 +132,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>blackEnemies</find>
-      <find>rankingList</find>
-      <find>laserShoot</find>
       <find>angle</find>
       <find>random</find>
       <find>greenEnemies</find>
@@ -108,6 +159,9 @@
       <find>gamevi</find>
       <find>checkHighScore</find>
       <find>createScoreSubScene</find>
+      <find>brown</find>
+      <find>score</find>
+      <find>gamePane</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -135,9 +189,55 @@
         <option value="$PROJECT_DIR$/src/model/SmallInfoLabel.java" />
         <option value="$PROJECT_DIR$/ranking.list" />
         <option value="$PROJECT_DIR$/src/view/ViewManager.java" />
+        <option value="$PROJECT_DIR$/src/model/ScoreManager.java" />
+        <option value="$PROJECT_DIR$/src/model/GameBackground.java" />
         <option value="$PROJECT_DIR$/src/model/GameViewManager.java" />
       </list>
     </option>
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/model/GameViewManager.java">
+      <ranges>
+        <range start1="8" end1="9" start2="8" end2="8" changelist="ec0a164c-90b0-4f53-8e19-1499bcdef361" />
+        <range start1="14" end1="16" start2="13" end2="16" changelist="ec0a164c-90b0-4f53-8e19-1499bcdef361" />
+        <range start1="37" end1="41" start2="37" end2="37" changelist="ec0a164c-90b0-4f53-8e19-1499bcdef361" />
+        <range start1="45" end1="46" start2="41" end2="42" changelist="ec0a164c-90b0-4f53-8e19-1499bcdef361" />
+        <range start1="54" end1="57" start2="50" end2="50" changelist="aee67389-5fa3-4dce-83ab-cf2908a11d6c" />
+        <range start1="67" end1="68" start2="60" end2="60" changelist="aee67389-5fa3-4dce-83ab-cf2908a11d6c" />
+        <range start1="80" end1="80" start2="72" end2="73" changelist="ec0a164c-90b0-4f53-8e19-1499bcdef361" />
+        <range start1="85" end1="85" start2="78" end2="81" changelist="ec0a164c-90b0-4f53-8e19-1499bcdef361" />
+        <range start1="88" end1="89" start2="84" end2="85" changelist="aee67389-5fa3-4dce-83ab-cf2908a11d6c" />
+        <range start1="92" end1="96" start2="88" end2="88" changelist="aee67389-5fa3-4dce-83ab-cf2908a11d6c" />
+        <range start1="98" end1="170" start2="90" end2="91" changelist="aee67389-5fa3-4dce-83ab-cf2908a11d6c" />
+        <range start1="218" end1="219" start2="139" end2="141" changelist="ec0a164c-90b0-4f53-8e19-1499bcdef361" />
+        <range start1="237" end1="238" start2="159" end2="160" changelist="aee67389-5fa3-4dce-83ab-cf2908a11d6c" />
+        <range start1="243" end1="244" start2="165" end2="166" changelist="ec0a164c-90b0-4f53-8e19-1499bcdef361" />
+        <range start1="245" end1="248" start2="167" end2="170" changelist="ec0a164c-90b0-4f53-8e19-1499bcdef361" />
+        <range start1="294" end1="295" start2="216" end2="217" changelist="ec0a164c-90b0-4f53-8e19-1499bcdef361" />
+        <range start1="333" end1="333" start2="255" end2="257" changelist="aee67389-5fa3-4dce-83ab-cf2908a11d6c" />
+        <range start1="334" end1="339" start2="258" end2="263" changelist="aee67389-5fa3-4dce-83ab-cf2908a11d6c" />
+        <range start1="340" end1="358" start2="264" end2="268" changelist="aee67389-5fa3-4dce-83ab-cf2908a11d6c" />
+        <range start1="360" end1="363" start2="270" end2="276" changelist="aee67389-5fa3-4dce-83ab-cf2908a11d6c" />
+        <range start1="373" end1="374" start2="286" end2="287" changelist="aee67389-5fa3-4dce-83ab-cf2908a11d6c" />
+        <range start1="384" end1="385" start2="297" end2="298" changelist="ec0a164c-90b0-4f53-8e19-1499bcdef361" />
+        <range start1="444" end1="474" start2="357" end2="357" changelist="ec0a164c-90b0-4f53-8e19-1499bcdef361" />
+        <range start1="497" end1="500" start2="380" end2="402" changelist="ec0a164c-90b0-4f53-8e19-1499bcdef361" />
+        <range start1="501" end1="502" start2="403" end2="403" changelist="ec0a164c-90b0-4f53-8e19-1499bcdef361" />
+        <range start1="504" end1="555" start2="405" end2="406" changelist="ec0a164c-90b0-4f53-8e19-1499bcdef361" />
+        <range start1="556" end1="572" start2="407" end2="411" changelist="ec0a164c-90b0-4f53-8e19-1499bcdef361" />
+        <range start1="573" end1="573" start2="412" end2="413" changelist="ec0a164c-90b0-4f53-8e19-1499bcdef361" />
+        <range start1="575" end1="575" start2="415" end2="416" changelist="ec0a164c-90b0-4f53-8e19-1499bcdef361" />
+        <range start1="576" end1="577" start2="417" end2="418" changelist="ec0a164c-90b0-4f53-8e19-1499bcdef361" />
+        <range start1="578" end1="580" start2="419" end2="421" changelist="ec0a164c-90b0-4f53-8e19-1499bcdef361" />
+        <range start1="581" end1="582" start2="422" end2="423" changelist="ec0a164c-90b0-4f53-8e19-1499bcdef361" />
+        <range start1="587" end1="610" start2="428" end2="428" changelist="ec0a164c-90b0-4f53-8e19-1499bcdef361" />
+        <range start1="611" end1="611" start2="429" end2="453" changelist="ec0a164c-90b0-4f53-8e19-1499bcdef361" />
+        <range start1="617" end1="618" start2="459" end2="459" changelist="ec0a164c-90b0-4f53-8e19-1499bcdef361" />
+        <range start1="625" end1="626" start2="466" end2="466" changelist="ec0a164c-90b0-4f53-8e19-1499bcdef361" />
+        <range start1="640" end1="641" start2="480" end2="480" changelist="ec0a164c-90b0-4f53-8e19-1499bcdef361" />
+        <range start1="678" end1="679" start2="517" end2="517" changelist="aee67389-5fa3-4dce-83ab-cf2908a11d6c" />
+      </ranges>
+    </file>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="630" />
@@ -153,23 +253,41 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="GameApllication" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GameApllication" type="462c0819:PsiDirectoryNode" />
+              <item name="StarTrooper" type="b2602c69:ProjectViewProjectNode" />
+              <item name="StarTrooper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="GameApllication" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GameApllication" type="462c0819:PsiDirectoryNode" />
+              <item name="StarTrooper" type="b2602c69:ProjectViewProjectNode" />
+              <item name="StarTrooper" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="StarTrooper" type="b2602c69:ProjectViewProjectNode" />
+              <item name="StarTrooper" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="game" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="StarTrooper" type="b2602c69:ProjectViewProjectNode" />
+              <item name="StarTrooper" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="StarTrooper" type="b2602c69:ProjectViewProjectNode" />
+              <item name="StarTrooper" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -185,7 +303,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../star_trooper_refactor.patch" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -253,6 +371,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="ec0a164c-90b0-4f53-8e19-1499bcdef361" name="Default Changelist" comment="" />
+      <changelist id="aee67389-5fa3-4dce-83ab-cf2908a11d6c" name="star trooper refactor" comment="" />
       <created>1560344232620</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -269,6 +388,7 @@
       <workItem from="1562594023872" duration="14112000" />
       <workItem from="1562646474758" duration="1630000" />
       <workItem from="1562775512599" duration="8973000" />
+      <workItem from="1576266249786" duration="5889000" />
     </task>
     <servers />
   </component>
@@ -296,7 +416,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="217043000" />
+    <option name="totallyTimeSpent" value="222932000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -308,20 +428,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="57" y="-7" width="1486" height="878" extended-state="6" />
+    <frame x="55" y="-7" width="1488" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4991453" visible="true" weight="0.16269284" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4991453" visible="true" weight="0.16526611" />
       <window_info id="Structure" order="1" sideWeight="0.50085473" side_tool="true" weight="0.15638149" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" sideWeight="0.50085473" side_tool="true" weight="0.15638149" />
-      <window_info anchor="bottom" id="Inspection Results" weight="0.3297587" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3297587" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21581769" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.21581769" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3994638" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -329,9 +448,11 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3297587" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3297587" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3297587" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.3297587" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3297587" />
+      <window_info anchor="bottom" id="Inspection Results" order="13" weight="0.3297587" />
+      <window_info anchor="right" id="Key Promoter X" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -459,9 +580,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#0#300#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -516,32 +634,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/game/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="323">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Score.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/ScoreManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/ViewManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="41" column="8" lean-forward="true" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="25" />
+        <state relative-caret-position="179">
+          <caret line="176" column="32" selection-start-line="176" selection-start-column="32" selection-end-line="176" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6037#6038#0" expanded="true" />
-            <element signature="e#6069#6070#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/GameBackground.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/GameViewManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1503">
-          <caret line="564" column="36" selection-start-line="564" selection-start-column="36" selection-end-line="564" selection-end-column="36" />
+        <state relative-caret-position="796">
+          <caret line="453" lean-forward="true" selection-start-line="453" selection-end-line="453" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#10493#10808#0" expanded="true" />
+            <element signature="e#10807#10808#0" expanded="true" />
           </folding>
         </state>
       </provider>

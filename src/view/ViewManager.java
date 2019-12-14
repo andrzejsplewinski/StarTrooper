@@ -32,6 +32,8 @@ public class ViewManager {
     private List<ShipPicker> shipList;
     private SHIP shipChoosen;
 
+    private ScoreManager scoreManager;
+
     public ViewManager() {
 
         menuButtons = new ArrayList<>();
@@ -39,6 +41,7 @@ public class ViewManager {
         Scene mainScene = new Scene(mainPane, WIDTH, HEIGHT);
         mainStage = new Stage();
         mainStage.setScene(mainScene);
+        scoreManager = new ScoreManager();
         createSubScene();
         createButtons();
         createBackground();
@@ -115,9 +118,11 @@ public class ViewManager {
         infoLabel.setLayoutY(25);
         scoreSubScene.getPane().getChildren().add(infoLabel);
 
-        GameViewManager manager = new GameViewManager();
+//        GameViewManager manager = new GameViewManager();
 
-        List<Map.Entry<String, Integer>> list = new LinkedList<>(manager.sortedScoreMap.entrySet());
+
+        HashMap<String, Integer> highScore = scoreManager.getHighScores();
+        List<Map.Entry<String, Integer>> list = new LinkedList<>(highScore.entrySet());
         list.sort(Map.Entry.comparingByValue(Comparator.reverseOrder()));
 
         if (!list.isEmpty()) {

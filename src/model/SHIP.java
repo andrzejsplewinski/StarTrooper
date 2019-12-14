@@ -6,19 +6,19 @@ public enum SHIP {
     ORANGE("view/resources/shipchooser/playerShip2_orange.png", "view/resources/shipchooser/playerLife2_orange.png"),
     RED("view/resources/shipchooser/playerShip2_red.png", "view/resources/shipchooser/playerLife2_red.png");
 
-    private String urlShip;
-    private String urlLife;
+    private String shipPath;
+    private String lifePath;
 
-    SHIP(String urlShip, String urlLife) {
-        this.urlShip = urlShip;
-        this.urlLife = urlLife;
+    SHIP(String ShipPath, String lifePath) {
+        this.shipPath = ShipPath;
+        this.lifePath = lifePath;
     }
 
-    public String getUrlShip(){
-        return this.urlShip;
+    public String getShipPath(){
+        return this.shipPath;
     }
 
-    public String getUrlLife() {
-        return urlLife;
+    public String getLifePath() {
+        return lifePath;
     }
 }

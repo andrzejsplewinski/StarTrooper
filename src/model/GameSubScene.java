@@ -17,14 +17,16 @@ public class GameSubScene extends SubScene {
         prefWidth(600);
         prefHeight(400);
 
-        BackgroundImage image = new BackgroundImage(new Image(BACKGROUND_IMAGE, 600, 400, false, true),
+        Image image = new Image(BACKGROUND_IMAGE, 600, 400, false, true);
+        BackgroundImage backgroundImage = new BackgroundImage(
+                image,
                 BackgroundRepeat.NO_REPEAT,
                 BackgroundRepeat.NO_REPEAT,
                 BackgroundPosition.DEFAULT,
                 null);
 
-        AnchorPane root2 = (AnchorPane) this.getRoot();
-        root2.setBackground(new Background(image));
+        AnchorPane root = (AnchorPane) this.getRoot();
+        root.setBackground(new Background(backgroundImage));
 
         isHidden = true;
 
@@ -36,13 +38,11 @@ public class GameSubScene extends SubScene {
         TranslateTransition transition = new TranslateTransition();
         transition.setDuration(Duration.seconds(0.3));
         transition.setNode(this);
-        if (isHidden) {
-            transition.setToX(-1050);
-            isHidden = false;
-        } else {
-            transition.setToX(0);
-            isHidden = true;
-        }
+
+        int x = isHidden ? -1050 : 0;
+        transition.setToX(x);
+        isHidden = !isHidden;
+
         transition.play();
     }
 
