@@ -4,16 +4,16 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 
-public class GameBackground {
+class GameBackground {
     private final static String BACKGROUND_IMAGE = "view/resources/darkPurple.png";
     private GridPane gridPane1;
     private GridPane gridPane2;
 
 
-    public GameBackground() {
+    GameBackground() {
     }
 
-    public void createBackground(AnchorPane gamePane) {
+    void createBackground(AnchorPane gamePane) {
         gridPane1 = new GridPane();
         gridPane2 = new GridPane();
 
@@ -32,7 +32,7 @@ public class GameBackground {
     }
 
 
-    public void moveBackground() {
+    void moveBackground() {
         gridPane1.setLayoutY(gridPane1.getLayoutY() + 0.5);
         gridPane2.setLayoutY(gridPane2.getLayoutY() + 0.5);
 
