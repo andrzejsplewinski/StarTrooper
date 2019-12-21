@@ -53,7 +53,7 @@ public class GameViewManager {
     private List<ImageView> playerLifes;
     private int playerLife;
     private int points;
-    private List<Node> laser;
+    private List<Node> laser = new ArrayList<>();
     private GameBackground gameBackground;
     private ScoreManager scoreManager;
     private ElementBehavior elementBehavior;
@@ -116,9 +116,9 @@ public class GameViewManager {
         createRedEnemies();
     }
 
-    private void createPlayerLifes(SHIP shipChossen) {
+    private void createPlayerLifes(SHIP shipChosen) {
         for (int i = 0; i < 3; i++) {
-            playerLifes.add(new ImageView(shipChossen.getLifePath()));
+            playerLifes.add(new ImageView(shipChosen.getLifePath()));
             playerLifes.get(i).setLayoutX(380 + (playerLifes.size() * 50));
             playerLifes.get(i).setLayoutY(120);
             gamePane.getChildren().add(playerLifes.get(i));
@@ -164,7 +164,7 @@ public class GameViewManager {
 
     private void moveGameElements() {
         star.setLayoutY(star.getLayoutY() + 5);
-        elementBehavior.laserMoves(laser, GAME_HEIGHT);
+        elementBehavior.laserMoves(laser);
         elementBehavior.moveElementFromUpToDown(brownMeteor, 7, 4);
         elementBehavior.moveElementFromUpToDown(greyMeteors, 9, 6);
         elementBehavior.moveElementFromUpToDown(greenEnemies, 1, 0);
@@ -214,7 +214,6 @@ public class GameViewManager {
     }
 
     private void collisionsHandling() {
-        laser = new ArrayList<>();
         shipCollideWithStar(ship, star);
         double relocatePosition = randomPositionGenerator.nextInt(370);
         laserCollideWithElement(laser, brownMeteor, relocatePosition);

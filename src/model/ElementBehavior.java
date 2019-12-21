@@ -6,18 +6,17 @@ import javafx.scene.image.ImageView;
 import javafx.scene.shape.*;
 import javafx.util.Duration;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class ElementBehavior {
+class ElementBehavior {
     private Random randomPositionGenerator = new Random();
-    private List<ImageView> greenEnemies = new ArrayList<>();
-    private List<ImageView> redEnemies = new ArrayList<>();
-    public ElementBehavior() {
+    private final static int GAME_HEIGHT = 800;
+
+    ElementBehavior() {
     }
 
-    public void relocateElementsPosition(List<ImageView> element, double relocatePosition) {
+    void relocateElementsPosition(List<ImageView> element, double relocatePosition) {
         setThePositionOfTheElementsWhenTheElementsAreBehindTheScene(element, relocatePosition);
     }
 
@@ -29,14 +28,14 @@ public class ElementBehavior {
         }
     }
 
-    public void relocateStarPosition(ImageView star) {
+    void relocateStarPosition(ImageView star) {
         if (star.getLayoutY() > 1200) {
             star.setLayoutX(randomPositionGenerator.nextInt(370));
             star.setLayoutY(-(randomPositionGenerator.nextInt(3200) + 600));
         }
     }
 
-    public void initializeTransitionGreenEnemies(List<ImageView> greenEnemies) {
+    void initializeTransitionGreenEnemies(List<ImageView> greenEnemies) {
         for (ImageView green : greenEnemies) {
             Path path = new Path();
             path.getElements().add(new MoveTo(250, -100));
@@ -56,7 +55,7 @@ public class ElementBehavior {
         }
     }
 
-    public void initializeTransitionRedEnemies(List<ImageView> redEnemies) {
+    void initializeTransitionRedEnemies(List<ImageView> redEnemies) {
         for (ImageView red : redEnemies) {
             Path path = new Path();
             MoveTo moveTo = new MoveTo();
@@ -78,7 +77,7 @@ public class ElementBehavior {
         }
     }
 
-    public void specialElementBehavior(List<ImageView> enemies, ImageView ship) {
+    void specialElementBehavior(List<ImageView> enemies, ImageView ship) {
         for (ImageView black : enemies) {
             black.setLayoutX(ship.getLayoutX());
         }
@@ -93,7 +92,7 @@ public class ElementBehavior {
         }
     }
 
-    public void laserMoves(List<Node> laser, int GAME_HEIGHT) {
+    void laserMoves(List<Node> laser) {
         for (int i = 0; i < laser.size(); i++) {
             if (laser.get(i).getLayoutY() < GAME_HEIGHT) {
                 laser.get(i).setLayoutY(laser.get(i).getLayoutY() - 7);
@@ -101,7 +100,7 @@ public class ElementBehavior {
         }
     }
 
-    public void moveElementFromUpToDown(List<ImageView> element, int speed, int route) {
+    void moveElementFromUpToDown(List<ImageView> element, int speed, int route) {
         for (ImageView elements : element) {
             elements.setLayoutY(elements.getLayoutY() + speed);
             elements.setRotate(elements.getRotate() + route);
