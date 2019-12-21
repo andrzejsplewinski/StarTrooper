@@ -53,25 +53,23 @@ public class GameViewManager {
     private List<ImageView> playerLifes;
     private int playerLife;
     private int points;
-
-    private List<Node> laser = new ArrayList<>();
-
-    private Duration firingInterval = Duration.millis(1000);
-    private Timeline firing = new Timeline(
-            new KeyFrame(Duration.ZERO, event -> fire()),
-            new KeyFrame(firingInterval));
-
+    private List<Node> laser;
     private GameBackground gameBackground;
     private ScoreManager scoreManager;
-    ElementsBehavior elementsBehavior;
+    private ElementBehavior elementBehavior;
+    private GameListeners gameListeners;
 
     public GameViewManager() {
         initializeStage();
         randomPositionGenerator = new Random();
-        elementsBehavior = new ElementsBehavior();
-        elementsBehavior.createKeyListeners(gameScene, firing);
+        elementBehavior = new ElementBehavior();
+        gameListeners = new GameListeners();
+        Duration firingInterval = Duration.millis(1000);
+        Timeline firing = new Timeline(
+                new KeyFrame(Duration.ZERO, event -> fire()),
+                new KeyFrame(firingInterval));
+        gameListeners.createKeyListeners(gameScene, firing);
         scoreManager = new ScoreManager();
-
     }
 
     private void initializeStage() {
@@ -81,18 +79,18 @@ public class GameViewManager {
         gameStage.setScene(gameScene);
     }
 
-    public void createNewGame(Stage menuStage, SHIP shipChoosen) {
+    public void createNewGame(Stage menuStage, SHIP shipChosen) {
         this.menuStage = menuStage;
         this.menuStage.hide();
         gameBackground = new GameBackground();
         gameBackground.createBackground(gamePane);
-        createShip(shipChoosen);
-        createGameElements(shipChoosen);
+        createShip(shipChosen);
+        createGameElements(shipChosen);
         createGameLoop();
         gameStage.show();
     }
 
-    private void createGameElements(SHIP shipChossen) {
+    private void createGameElements(SHIP shipChosen) {
         playerLife = 2;
         star = new ImageView(GOLD_STAR_IMAGE);
         setElementsOnPosition(star);
@@ -102,52 +100,60 @@ public class GameViewManager {
         pointsLabel.setLayoutY(60);
         gamePane.getChildren().add(pointsLabel);
         playerLifes = new ArrayList<>();
+        brownMeteor = new ArrayList<>();
+        greyMeteors = new ArrayList<>();
+        blackEnemies = new ArrayList<>();
+        blueEnemies = new ArrayList<>();
+        greenEnemies = new ArrayList<>();
+        redEnemies = new ArrayList<>();
 
+        createPlayerLifes(shipChosen);
+        createMeteor(3, brownMeteor, BROWN_METEOR);
+        createMeteor(4, greyMeteors, GREY_METEOR);
+        createBlackAndBlueEnemies(blackEnemies, BLACK_ENEMIES_IMAGE);
+        createBlackAndBlueEnemies(blueEnemies, BLUE_ENEMIES_IMAGE);
+        createGreenEnemies();
+        createRedEnemies();
+    }
+
+    private void createPlayerLifes(SHIP shipChossen) {
         for (int i = 0; i < 3; i++) {
             playerLifes.add(new ImageView(shipChossen.getLifePath()));
             playerLifes.get(i).setLayoutX(380 + (playerLifes.size() * 50));
             playerLifes.get(i).setLayoutY(120);
             gamePane.getChildren().add(playerLifes.get(i));
         }
+    }
 
-        brownMeteor = new ArrayList<>();
-        for (int i = 0; i < 3; i++) {
-            brownMeteor.add(new ImageView(BROWN_METEOR));
-            setElementsOnPosition(brownMeteor.get(i));
-            gamePane.getChildren().add(brownMeteor.get(i));
+    private void createMeteor(int numberOfMeteors, List<ImageView> meteors, String meteor) {
+        for (int i = 0; i < numberOfMeteors; i++) {
+            meteors.add(new ImageView(meteor));
+            setElementsOnPosition(meteors.get(i));
+            gamePane.getChildren().add(meteors.get(i));
         }
+    }
 
-        greyMeteors = new ArrayList<>();
-        for (int i = 0; i < 5; i++) {
-            greyMeteors.add(new ImageView(GREY_METEOR));
-            setElementsOnPosition(greyMeteors.get(i));
-            gamePane.getChildren().add(greyMeteors.get(i));
-        }
-
-        blackEnemies = new ArrayList<>();
-        blackEnemies.add(new ImageView(BLACK_ENEMIES_IMAGE));
-        for (ImageView black : blackEnemies) {
-            setElementsOnPosition(black);
-            gamePane.getChildren().add(black);
-        }
-        blueEnemies = new ArrayList<>();
-        blueEnemies.add(new ImageView(BLUE_ENEMIES_IMAGE));
-        for (ImageView blue : blueEnemies) {
-            setElementsOnPosition(blue);
-            gamePane.getChildren().add(blue);
-        }
-        greenEnemies = new ArrayList<>();
+    private void createGreenEnemies() {
         greenEnemies.add(new ImageView(GREEN_ENEMIES_IMAGE));
         for (ImageView green : greenEnemies) {
             gamePane.getChildren().add(green);
-            elementsBehavior.initializeTransitionGreenEnemies(greenEnemies);
+            elementBehavior.initializeTransitionGreenEnemies(greenEnemies);
         }
+    }
 
-        redEnemies = new ArrayList<>();
+    private void createRedEnemies() {
         redEnemies.add(new ImageView(RED_ENEMIES_IMAGE));
         for (ImageView red : redEnemies) {
             gamePane.getChildren().add(red);
-            elementsBehavior.initializeTransitionRedEnemies(redEnemies);
+            elementBehavior.initializeTransitionRedEnemies(redEnemies);
+        }
+    }
+
+    private void createBlackAndBlueEnemies(List<ImageView> enemies, String enemy) {
+        enemies.add(new ImageView(enemy));
+        for (ImageView element : enemies) {
+            setElementsOnPosition(element);
+            gamePane.getChildren().add(element);
         }
     }
 
@@ -158,52 +164,39 @@ public class GameViewManager {
 
     private void moveGameElements() {
         star.setLayoutY(star.getLayoutY() + 5);
-        laserMoves();
-        moveElementFromUpToDown(brownMeteor, 7, 4);
-        moveElementFromUpToDown(greyMeteors, 9, 6);
-        moveElementFromUpToDown(greenEnemies, 1, 0);
-        moveElementFromUpToDown(redEnemies, 2, 0);
-        moveElementFromUpToDown(blackEnemies, 4, 0);
-        moveElementFromUpToDown(blueEnemies, 15, 0);
-        elementsBehavior.specialElementBehavior(blackEnemies, ship);
-        elementsBehavior.specialElementBehavior(blueEnemies, ship);
-    }
-
-    private void laserMoves() {
-        for (int i = 0; i < laser.size(); i++) {
-            if (laser.get(i).getLayoutY() < GAME_HEIGHT) {
-                laser.get(i).setLayoutY(laser.get(i).getLayoutY() - 7);
-            } else laser.remove(i);
-        }
-    }
-
-    private void moveElementFromUpToDown(List<ImageView> element, int speed, int route) {
-        for (ImageView elements : element) {
-            elements.setLayoutY(elements.getLayoutY() + speed);
-            elements.setRotate(elements.getRotate() + route);
-        }
+        elementBehavior.laserMoves(laser, GAME_HEIGHT);
+        elementBehavior.moveElementFromUpToDown(brownMeteor, 7, 4);
+        elementBehavior.moveElementFromUpToDown(greyMeteors, 9, 6);
+        elementBehavior.moveElementFromUpToDown(greenEnemies, 1, 0);
+        elementBehavior.moveElementFromUpToDown(redEnemies, 2, 0);
+        elementBehavior.moveElementFromUpToDown(blackEnemies, 4, 0);
+        elementBehavior.moveElementFromUpToDown(blueEnemies, 15, 0);
+        elementBehavior.specialElementBehavior(blackEnemies, ship);
+        elementBehavior.specialElementBehavior(blueEnemies, ship);
     }
 
     private void setElementsOnPosition(ImageView image) {
-        image.setLayoutX(randomPositionGenerator.nextInt(370));
+        double relocatePosition = randomPositionGenerator.nextInt(370);
+        image.setLayoutX(relocatePosition);
         image.setLayoutY(-(randomPositionGenerator.nextInt(3200) + 600));
     }
 
-    private void createShip(SHIP shipChoosen) {
-        ship = new ImageView(shipChoosen.getShipPath());
+    private void createShip(SHIP shipChosen) {
+        ship = new ImageView(shipChosen.getShipPath());
         ship.setLayoutX(GAME_WIDTH / 2 - 50);
         ship.setLayoutY(GAME_HEIGHT - 90);
         gamePane.getChildren().add(ship);
     }
 
     private void checkIfElementsAreBehindTheSceneAndRelocate() {
-        elementsBehavior.relocateElementsPosition(greenEnemies, randomPositionGenerator.nextInt(370));
-        elementsBehavior.relocateElementsPosition(blackEnemies, randomPositionGenerator.nextInt(370));
-        elementsBehavior.relocateElementsPosition(blueEnemies, randomPositionGenerator.nextInt(370));
-        elementsBehavior.relocateElementsPosition(redEnemies, 0);
-        elementsBehavior.relocateElementsPosition(brownMeteor, randomPositionGenerator.nextInt(370));
-        elementsBehavior.relocateElementsPosition(greyMeteors, randomPositionGenerator.nextInt(370));
-        elementsBehavior.relocateStarPosition(star);
+        double relocatePosition = randomPositionGenerator.nextInt(370);
+        elementBehavior.relocateElementsPosition(greenEnemies, relocatePosition);
+        elementBehavior.relocateElementsPosition(blackEnemies, relocatePosition);
+        elementBehavior.relocateElementsPosition(blueEnemies, relocatePosition);
+        elementBehavior.relocateElementsPosition(redEnemies, 0);
+        elementBehavior.relocateElementsPosition(brownMeteor, relocatePosition);
+        elementBehavior.relocateElementsPosition(greyMeteors, relocatePosition);
+        elementBehavior.relocateStarPosition(star);
     }
 
     private void createGameLoop() {
@@ -213,37 +206,32 @@ public class GameViewManager {
                 gameBackground.moveBackground();
                 checkIfElementsAreBehindTheSceneAndRelocate();
                 moveGameElements();
-                try {
-                    collisionsHandling();
-                } catch (CollideExceptions collideExceptions) {
-                    collideExceptions.printStackTrace();
-                }
-                elementsBehavior.movesShip(ship);
+                collisionsHandling();
+                gameListeners.movesShip(ship);
             }
         };
         gameTimer.start();
     }
 
-    private void collisionsHandling() throws CollideExceptions {
+    private void collisionsHandling() {
+        laser = new ArrayList<>();
         shipCollideWithStar(ship, star);
-
-        laserCollideWithElement(laser, brownMeteor, randomPositionGenerator.nextInt(370));
-        laserCollideWithElement(laser, greyMeteors, randomPositionGenerator.nextInt(370));
-        laserCollideWithElement(laser, greenEnemies, randomPositionGenerator.nextInt(370));
-        laserCollideWithElement(laser, blackEnemies, randomPositionGenerator.nextInt(370));
-        laserCollideWithElement(laser, blueEnemies, randomPositionGenerator.nextInt(370));
+        double relocatePosition = randomPositionGenerator.nextInt(370);
+        laserCollideWithElement(laser, brownMeteor, relocatePosition);
+        laserCollideWithElement(laser, greyMeteors, relocatePosition);
+        laserCollideWithElement(laser, greenEnemies, relocatePosition);
+        laserCollideWithElement(laser, blackEnemies, relocatePosition);
+        laserCollideWithElement(laser, blueEnemies, relocatePosition);
         laserCollideWithElement(laser, redEnemies, 0);
-
-        elementCollideWithShip(ship, brownMeteor, randomPositionGenerator.nextInt(370));
-        elementCollideWithShip(ship, greyMeteors, randomPositionGenerator.nextInt(370));
-
-        elementCollideWithShip(ship, blackEnemies, randomPositionGenerator.nextInt(370));
-        elementCollideWithShip(ship, blueEnemies, randomPositionGenerator.nextInt(370));
-        elementCollideWithShip(ship, greenEnemies, randomPositionGenerator.nextInt(370));
+        elementCollideWithShip(ship, brownMeteor, relocatePosition);
+        elementCollideWithShip(ship, greyMeteors, relocatePosition);
+        elementCollideWithShip(ship, blackEnemies, relocatePosition);
+        elementCollideWithShip(ship, blueEnemies, relocatePosition);
+        elementCollideWithShip(ship, greenEnemies, relocatePosition);
         elementCollideWithShip(ship, redEnemies, 0);
     }
 
-    public void shipCollideWithStar(ImageView ship, ImageView star) {
+    private void shipCollideWithStar(ImageView ship, ImageView star) {
         Random randomPositionGenerator = new Random();
         if (star.getBoundsInParent().intersects(ship.getBoundsInParent())) {
             star.relocate(randomPositionGenerator.nextInt(370), -(randomPositionGenerator.nextInt(3200) + 600));
@@ -251,7 +239,7 @@ public class GameViewManager {
         }
     }
 
-    public void elementCollideWithShip(ImageView ship, List<ImageView> element, double layoutX) {
+    private void elementCollideWithShip(ImageView ship, List<ImageView> element, double layoutX) {
         for (ImageView elements : element) {
             if (elements.getBoundsInParent().intersects(ship.getBoundsInParent())) {
                 elements.relocate(layoutX, -300);
@@ -260,20 +248,16 @@ public class GameViewManager {
         }
     }
 
-    public void laserCollideWithElement(List<Node> laser, List<ImageView> element, double layoutX) throws CollideExceptions {
-        try {
+    private void laserCollideWithElement(List<Node> laser, List<ImageView> element, double layoutX) {
+        for (ImageView elements : element) {
             for (int i = 0; i < laser.size(); i++) {
-                for (ImageView elements : element) {
-                    if (laser.get(i).getBoundsInParent().intersects(elements.getBoundsInParent())) {
-                        elements.relocate(layoutX, -300);
-                        gamePane.getChildren().remove(laser.get(i));
-                        laser.remove(i);
-                        addPoints(2);
-                    }
+                if (laser.get(i).getBoundsInParent().intersects(elements.getBoundsInParent())) {
+                    elements.relocate(layoutX, -300);
+                    gamePane.getChildren().remove(laser.get(i));
+                    laser.remove(i);
+                    addPoints(2);
                 }
             }
-        } catch (Exception e) {
-            e.printStackTrace();
         }
     }
 

@@ -54,7 +54,6 @@ public class ViewManager {
         }
         subScene.moveSubScene();
         sceneToHide = subScene;
-
     }
 
     private void createSubScene() {
@@ -106,7 +105,6 @@ public class ViewManager {
         helpSubScene.getPane().getChildren().add(label4);
         helpSubScene.getPane().getChildren().add(label5);
         helpSubScene.getPane().getChildren().add(infoLabel);
-
     }
 
     private void createScoreSubScene() {
@@ -117,9 +115,6 @@ public class ViewManager {
         infoLabel.setLayoutX(110);
         infoLabel.setLayoutY(25);
         scoreSubScene.getPane().getChildren().add(infoLabel);
-
-//        GameViewManager manager = new GameViewManager();
-
 
         HashMap<String, Integer> highScore = scoreManager.getHighScores();
         List<Map.Entry<String, Integer>> list = new LinkedList<>(highScore.entrySet());
@@ -177,10 +172,8 @@ public class ViewManager {
                 gameViewManager.createNewGame(mainStage, shipChoosen);
             }
         });
-
         return startButton;
     }
-
 
     public Stage getMainStage() {
         return mainStage;
@@ -191,7 +184,6 @@ public class ViewManager {
         button.setLayoutX(MENU_BUTTONS_STARTS_X);
         menuButtons.add(button);
         mainPane.getChildren().add(button);
-
     }
 
     private void createButtons() {
@@ -204,7 +196,6 @@ public class ViewManager {
     private void createStartButton() {
         GameButtons startButton = new GameButtons("START");
         addMenuButtons(startButton);
-
         startButton.setOnAction(event -> showSubScene(shipChooseSubScene));
     }
 
@@ -223,7 +214,6 @@ public class ViewManager {
     private void createExitButton() {
         GameButtons exitButton = new GameButtons("EXIT");
         addMenuButtons(exitButton);
-
         exitButton.setOnAction(event -> mainStage.close());
     }
 
@@ -241,9 +231,7 @@ public class ViewManager {
         ImageView logo = new ImageView("view/resources/logo.png");
         logo.setLayoutX(350);
         logo.setLayoutY(100);
-
         logo.setOnMouseEntered(event -> logo.setEffect(new DropShadow()));
-
         logo.setOnMouseExited(event -> logo.setEffect(null));
         mainPane.getChildren().add(logo);
     }
